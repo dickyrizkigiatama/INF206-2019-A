@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Latihan PBW</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <title>TugasPBW_Bootstrap</title>
+     <style>
+         .frame {padding: 3px;}
+         .head {
+             background-color: #DCDCDC;
+             height: 100px;
+             border: 1px solid greenyellow;
+             padding-left: 30px;
+             padding-top: 10px;
+             font-size: 25px;
+             font-family: 'Times New Roman';}
+         .form {
+             height: 400px;
+             border: 1px solid greenyellow;
+             padding: 10px;
+             font-family: 'Times New Roman';}
+         input,select{background-color: #1E90FF}
+         input[type=checkbox]{display: none;}
+         input[type=checkbox]+label:before{
+             content: "\2714";
+             border: 1px solid black;
+             display: inline-block;
+             width: 20px;
+             height: 20px;
+             background-color: #1E90FF;
+             color:transparent;
+             text-align: center;
+             line-height: 20px;
+             margin-right: 5px;}
+         input[type=checkbox]:checked+label:before{color: black;}
+         input[type=radio]{display: none;}
+         input[type=radio]+label:before{
+             content: "";
+             display: inline-block;
+             background-color:#1E90FF;
+             width: 15px;
+             height: 15px;
+             border: 1px solid #1E90FF;
+             border-radius: 50%;
+             margin-right: 5px;}
+         input[type=radio]:checked+label:before{background-color: black;}
+         table,tr,td{padding: 7px;}
+ </style>
+   </head>
+   <body>
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-12 frame">
+                 <div class="head">Pemrograman Berbasis WEB</div>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-lg-6 frame">
+                 <div class="form">
+                     Form Mahasiswa<br>
+                     <form action="" id="kolom">
+                         NPM            :<br><input type="text" id="npm"><br>
+                         Nama           :<br><input type="text" id="nama"><br>
+                         Alamat         :<br><input type="text" id="alamat"><br>
+                         Jenis Kelamin  :<br>
+                         <select id="jk">
+                            <option value="Pilihanmu">Pilih Jenis Kelamin</option>
+                             <option value="lelaki">laki-laki</option>
+                             <option value="perempuan">perempuan</option>
+                         </select><br>
+                         Hobby          :<br>
+                         <input type="checkbox" id="traveling" name="hobi">
+                         <label for="traveling">Traveling</label>
+                         <input type="checkbox" id="membaca" name="hobi">
+                         <label for="membaca">Membaca Buku</label>
+                         <input type="checkbox" id="bola" name="hobi">
+                         <label for="bola">Sepak Bola</label> <br>
+                         Kewarganegaraan :<br>
+                         <input type="radio" id="wna" name="negara">
+                         <label for="wna">WNA</label>
+                         <input type="radio" id="wni" name="negara>
+                         <label for="wni">WNI</label> <br>
+                         <button onclick="Validasi()" style="background-color:#FFD700;" type="submit">Simpan</button>
+                     </form>
+                 </div>
+             </div>
+             <div class="col-lg-6 frame">
+                 <div class="form">
+                     <div style="margin-left:15px;">Tabel Form Mahasiswa</div> <br>
+                     <table>
+                         <tr>
+                             <td>Npm</td>
+                             <td>Nama</td>
+                             <td>Alamat</td>
+                             <td>Jenis Kelamin</td>
+                             <td>Hobby</td>
+                             <td>Kewarganegaraan</td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <script>
+            function Validasi() {
+                const nama = document.getElementById("nama");
+                const npm = document.getElementById("npm");
+                const alamat = document.getElementById("alamat");
+                const jk = document.getElementById("jk");
+                const kolom_b = document.getElementById("kolom");
+    
+                if (npm.value == "" && nama.value == "" && alamat.value == "" && jk.value == "Pilihanmu"){
+                    alert("Mohon input data anda!");
+                }
+                else if (nama.value == ""){
+                    alert("Mohon input nama anda!");
+                }
+                else if (alamat.value == ""){
+                    alert("Mohon input alamat anda!");
+                }
+                else if (jk.value == "Pilihanmu"){
+                    alert("Mohon input jeniskelamin anda!");
+                }
+                else if (npm.value ==""){
+                    alert("Mohon input npm anda!");
+                }
+                else if (!kolom_b.hobi[0].checked && !kolom_b.hobi[1].checked && !kolom_b.hobi[2].checked) {
+                    alert("Mohon input hobi anda!");
+                }
+                else if (!kolom_b.negara[0].checked && !kolom_b.negara[1].checked) {
+                    alert("Mohon input kewarganegaraan anda!");
+                }
+                else{
+                    alert("Data anda berhasil tersimpan")
+                }
+            }
+        </script>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+ </html>
