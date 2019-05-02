@@ -45,7 +45,6 @@
 					<div id="main">
 						<div class="inner">
 							<h1>[Nama Perusahaan]</h1>
-							<a href="#" class="button primary">Ubah</a>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
 							<p>[Informasi umum tentang perusahaan dan tujuan perusahaan asuransi]</p>
 							<p>Syarat dan Ketentuan :</p>
@@ -57,7 +56,32 @@
 							<p>[perusahaan berlokasi pada daerah]</p>
 						</div>
 					</div>
-					
+
+					<!--form edit main-->
+					<div id="main">
+						<div class="inner">
+							<form action="#" method="POST">
+								<div class="form-group">
+									<label >[Nama perusahaan]</label>
+									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo # ?>" disabled>
+								</div>
+								<div class="form-group">
+									<label >[Informasi Umum]</label>
+									<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="nama" value="<?php echo # ?>">
+								</div>
+								<div class="form-group">
+									<label >[Syarat dan Ketentuan]</label>
+									<input required type="text" class="form-control" placeholder="Syarat dan Ketentuan" name="jurusan" value="<?php echo # ?>">
+								</div>
+								<div class="form-group">
+										<label >[Alamat:]</label>
+										<input required type="text" class="form-control" placeholder="Alamat terbaru" name="jurusan" value="<?php echo # ?>">
+								</div>
+							</form>
+							<button type="submit" class="button primary">Simpan</button>
+						</div>
+					</div>
+
 				<!-- Footer -->
 					<footer id="footer">
 						<center><div class="inner">
