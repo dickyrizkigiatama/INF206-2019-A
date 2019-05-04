@@ -23,7 +23,11 @@ class user_data extends CI_Model
         if ($user) {
 
             if ($user['role'] == "user") {
+<<<<<<< HEAD
                 if (password_verify($password, $user['password'])) {
+=======
+                if (password_verif($password, $user['password'])) {
+>>>>>>> 7536fd4489d31f7562fa2ca8bde22657b8f67fcd
                     $data = [
                         'username' => $user['username'],
                         'role' => $user['role']

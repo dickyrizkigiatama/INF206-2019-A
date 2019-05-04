@@ -32,8 +32,15 @@
 
 				<!-- Logo -->
 				<a href="index.html" class="logo">
+<<<<<<< HEAD
 
 					<span class="symbol"><img src="<?= base_url(); ?>images/1.png" alt="" /></span><span class="title">MAsiN</span>
+=======
+					<<<<<<< HEAD <span class="symbol"><img src="<?= base_url(); ?>images/1.png" alt="" /></span><span class="title">MAsiN</span>
+						=======
+						<span class="symbol"><img src="<?= base_url(); ?>images/1.png" alt="" /></span><span class="title">MAsiN</span>
+						>>>>>>> faris
+>>>>>>> 7536fd4489d31f7562fa2ca8bde22657b8f67fcd
 				</a>
 
 				<!-- Nav -->

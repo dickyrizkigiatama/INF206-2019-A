@@ -12,14 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
 
+=======
+    <<<<<<< HEAD <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style_Signup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="<?= base_url(); ?>assets/css/noscript.css" /></noscript>
+    =======
+>>>>>>> 7536fd4489d31f7562fa2ca8bde22657b8f67fcd
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style_Signup.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <noscript>
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/noscript.css" /></noscript>
+<<<<<<< HEAD
 
+=======
+    >>>>>>> faris
+>>>>>>> 7536fd4489d31f7562fa2ca8bde22657b8f67fcd
 
 </head>
 
@@ -91,6 +105,7 @@
 
 
     <!-- Scripts -->
+<<<<<<< HEAD
 
     <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/browser.min.js"></script>
@@ -98,6 +113,21 @@
     <script src="<?= base_url(); ?>assets/js/util.js"></script>
     <script src="<?= base_url(); ?>assets/js/main.js"></script>
 
+=======
+    <<<<<<< HEAD <script src="<?= base_url(); ?>assets/js/jquery.min.js">
+        </script>
+        <script src="<?= base_url(); ?>assets/js/browser.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/breakpoints.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/util.js"></script>
+        <script src="<?= base_url(); ?>assets/js/main.js"></script>
+        =======
+        <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/browser.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/breakpoints.min.js"></script>
+        <script src="<?= base_url(); ?>assets/js/util.js"></script>
+        <script src="<?= base_url(); ?>assets/js/main.js"></script>
+        >>>>>>> faris
+>>>>>>> 7536fd4489d31f7562fa2ca8bde22657b8f67fcd
 
 </body>
 
