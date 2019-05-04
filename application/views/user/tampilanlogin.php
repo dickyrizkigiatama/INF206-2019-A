@@ -12,14 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="<?=base_url();?>assets/css/main.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?=base_url();?>assets/css/style_Signup.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style_Signup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <noscript>
-        <link rel="stylesheet" href="<?=base_url();?>assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="<?= base_url(); ?>assets/css/noscript.css" /></noscript>
 
 </head>
 
@@ -61,30 +59,26 @@
                 <section>
                     <h2>Masuk</h2>
                     <br>
-                    <form method="POST" action="<?= base_url('login'); ?>">
-                        <div class="fields text-center">
-                            <div class="field">
-                                <input type="text" name="username" id="name"
-                                    placeholder="   "                                                                                                        Username" />
-                            </div>
-                            <div class="field text-center">
-                            </div>
-                            <div class="field">
-                                <input type="password" name="password" id="password"
-                                    placeholder=" "                                                                                                           Password" />
-                            </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <form method="POST" action="<?= base_url('login'); ?>">
+                                <div class="fields text-center">
+                                    <div class="field">
+                                        <input type="text" name="username" id="name" placeholder=" Masukkan Username  ">
+                                    </div>
+                                    <div class="field text-center">
+                                    </div>
+                                    <div class="field">
+                                        <input type="password" name="password" id="password" placeholder=" Masukkan Password ">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-outline-light">
+                                    Masuk
+                                </button>
+                            </form>
                         </div>
-                        <button type="submit" class="actions text-center">
-                            <!-- <br> -->
-                            Masuk
-                            <!-- <input type="submit" value="Masuk" class="primary" /> -->
-                        </button>
-                    </form>
-                    <a href="<?= base_url('login/daftar'); ?>">
-                    <button class="btn btn-link " type="submit" name="login" role="button">Belum punya akun ? Buat
-                            disini
-                        </button>
-                    </a>
+                    </div>
+                    <button type="submit" class="btn btn-outline-light"><a href="<?= base_url('login/daftar'); ?>">Belum punya akun Buat disini</a></button>
                 </section>
             </div>
         </div>
@@ -94,11 +88,11 @@
 
 
     <!-- Scripts -->
-    <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
-    <script src="<?=base_url();?>assets/js/browser.min.js"></script>
-    <script src="<?=base_url();?>assets/js/breakpoints.min.js"></script>
-    <script src="<?=base_url();?>assets/js/util.js"></script>
-    <script src="<?=base_url();?>assets/js/main.js"></script>
+    <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/browser.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/breakpoints.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/util.js"></script>
+    <script src="<?= base_url(); ?>assets/js/main.js"></script>
 
 </body>
 
