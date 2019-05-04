@@ -1,7 +1,8 @@
 <?php
 class Login extends CI_controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('user_data');
         $this->load->library('form_validation');
@@ -13,8 +14,7 @@ class Login extends CI_controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('user/tampilanlogin');
-        }
-        else {
+        } else {
             $this->user_data->cekuser();
         }
     }
@@ -25,8 +25,7 @@ class Login extends CI_controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('user/tampilandaftar');
-        }
-        else {
+        } else {
             $this->user_data->inputdata();
             redirect('login');
         }
