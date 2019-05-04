@@ -79,7 +79,7 @@
 
 								</div>
 
-								<button type="submit" class="btn btn-outline-light">Daftar</button>
+								<button type="submit" class="btn btn-outline-light">DAFTAR</button>
 							</form>
 						</div>
 					</div>

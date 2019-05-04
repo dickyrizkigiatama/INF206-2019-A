@@ -57,7 +57,7 @@
         <div id="main">
             <div class="inner text-center">
                 <section>
-                    <h2>Masuk</h2>
+                    <h2>MASUK</h2>
                     <br>
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
@@ -73,12 +73,12 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-outline-light">
-                                    Masuk
+                                    MASUK
                                 </button>
                             </form>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-outline-light"><a href="<?= base_url('login/daftar'); ?>">Belum punya akun Buat disini</a></button>
+                    <button type="submit" class="btn btn-outline-light"><a href="<?= base_url('login/daftar'); ?>">BELUM PUNYA AKUN ? BUAT DISINI</a></button>
                 </section>
             </div>
         </div>
