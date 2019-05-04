@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/rpl/INF206-2019-A/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = ' ';
 
 /*
 |--------------------------------------------------------------------------
