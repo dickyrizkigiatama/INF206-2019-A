@@ -64,7 +64,7 @@
 				</center>
 
 				<center>
-					<a class="btn btn-dark" href="masukUser.html">LOGIN</a>
+					<a class="btn btn-dark" href="<?= base_url(); ?>Login">LOGIN</a>
 				</center>
 
 
