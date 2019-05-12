@@ -25,7 +25,7 @@
 
 				<!-- Nav -->
 				<nav>
-					<ul>
+					<ul> 
 						<li><a href="#menu">Menu</a></li>
 					</ul>
 				</nav>
@@ -35,12 +35,22 @@
 
 		<!-- Menu -->
 		<nav id="menu">
+			<?php if ($user['role'] == "user") : ?>
 			<h2>Menu</h2>
 			<ul>
-				<li><a href="index.html">Beranda</a></li>
-				<li><a href="generic.html"><?= $user['username'];?></a></li>
-				<li><a href="generic.html">Keluar</a></li>
+				<li><a href="#">Beranda</a></li>
+				<li><a href="#"><?= $user['username'];?></a></li>
+				<li><a href="#">Keluar</a></li>
 			</ul>
+			<?php elseif($user['role'] == "admin") : ?>
+			<ul>
+				<li><a href="#">Beranda</a></li>
+				<li><a href="#"><?= $user['username'];?></a></li>
+				<li><a href="#">List Pendaftaran</a></li>
+				<li><a href="#">Edit</a></li>
+				<li><a href="#">Keluar</a></li>
+			</ul>
+			<?php endif;?>
 		</nav>
 
 		<!-- Main -->

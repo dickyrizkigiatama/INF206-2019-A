@@ -29,7 +29,26 @@ class user_data extends CI_Model
                     $this->session->set_userdata($data);
                     redirect('homeuser');
                 }
+                else{
+                    redirect('login');
+                }   
             }
+            elseif ($user['role'] == "admin"){
+                if (password_verify($password, $user['password'])) {
+                    $data = [
+                        'username' => $user['username'],
+                        'role' => $user['role']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('homeuser');
+                }
+                else{
+                    redirect('login');
+                }
+            }else{
+                redirect('login');
+            }
+            
         } else {
             redirect('login');
         }
