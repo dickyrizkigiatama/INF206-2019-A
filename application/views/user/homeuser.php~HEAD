@@ -5,9 +5,9 @@
 	<title>MAsiN</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/assets/css/main.css" />
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/assets/css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
@@ -38,7 +38,7 @@
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.html">Beranda</a></li>
-				<li><a href="generic.html">Nama Pengguna</a></li>
+				<li><a href="generic.html"><?= $user['username'];?></a></li>
 				<li><a href="generic.html">Keluar</a></li>
 			</ul>
 		</nav>
@@ -56,7 +56,7 @@
 				<section class="tiles">
 					<article class="style1">
 						<span class="image">
-							<img src="images/sinarmas.png" alt="" />
+							<img src="assets/images/sinarmas.png" alt="" />
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>Asura</h2>
@@ -267,11 +267,11 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/browser.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/breakpoints.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/util.js"></script>
+	<script src="<?= base_url(); ?>assets/js/main.js"></script>
 
 </body>
 
