@@ -36,11 +36,21 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.html">Beranda</a></li>
-				<li><a href="generic.html"><?= $user['username'];?></a></li>
-				<li><a href="generic.html">Keluar</a></li>
-			</ul>
+			<?php if($user['role'] == "user") : ?>
+				<ul>
+					<li><a href="#">Beranda</a></li>
+					<li><a href="#"><?= $user['username'];?></a></li>
+					<li><a href="#">Keluar</a></li>
+				</ul>
+				<?php elseif($user['role'] == "admin") : ?>
+					<ul>
+						<li><a href="#">Beranda</a></li>
+						<li><a href="#"><?= $user['username'];?></a></li>
+						<li><a href="#">List pendaftaran</a></li>
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">Keluar</a></li>
+					</ul>
+			<?php endif;?>
 		</nav>
 
 		<!-- Main -->
