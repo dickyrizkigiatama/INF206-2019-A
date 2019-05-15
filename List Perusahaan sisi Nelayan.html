@@ -5,9 +5,9 @@
 	<title>MAsiN</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="<?= base_url(); ?>assets/assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
-		<link rel="stylesheet" href="assets/assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
@@ -36,21 +36,11 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<h2>Menu</h2>
-			<?php if($user['role'] == "user") : ?>
-				<ul>
-					<li><a href="#">Beranda</a></li>
-					<li><a href="#"><?= $user['username'];?></a></li>
-					<li><a href="#">Keluar</a></li>
-				</ul>
-				<?php elseif($user['role'] == "admin") : ?>
-					<ul>
-						<li><a href="#">Beranda</a></li>
-						<li><a href="#"><?= $user['username'];?></a></li>
-						<li><a href="#">List pendaftaran</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">Keluar</a></li>
-					</ul>
-			<?php endif;?>
+			<ul>
+				<li><a href="index.html">Beranda</a></li>
+				<li><a href="generic.html">Nama Pengguna</a></li>
+				<li><a href="generic.html">Keluar</a></li>
+			</ul>
 		</nav>
 
 		<!-- Main -->
@@ -66,10 +56,7 @@
 				<section class="tiles">
 					<article class="style1">
 						<span class="image">
-							<a href="<?= base_url('home/detail'); ?>">
-								<img src="assets/images/sinarmas.png" alt="" />
-							</a>
-							
+							<img src="images/sinarmas.png" alt="" />
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>Asura</h2>
@@ -81,9 +68,7 @@
 					</article>
 					<article class="style2">
 						<span class="image">
-							<a href="<?= base_url('home/detail'); ?>">
-								<img src="images/bpjs.png" alt="" />
-							</a>
+							<img src="images/bpjs.png" alt="" />
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>BPJS Ketenagakerjaan</h2>
@@ -97,9 +82,7 @@
 					</article>
 					<article class="style3">
 						<span class="image">
-							<a href="<?= base_url('home/detail'); ?>">
-								<img src="images/askrindo.png" alt="" />
-							</a>
+							<img src="images/askrindo.png" alt="" />
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>Askrindo</h2>
@@ -113,10 +96,7 @@
 					</article>
 					<article class="style4">
 						<span class="image">
-							<a href="<?= base_url('home/detail'); ?>">
-								<img src="images/axa.png" alt="" />
-							</a>
-							
+							<img src="images/axa.png" alt="" />
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>AXA Mandiri Insurance</h2>
@@ -287,11 +267,11 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
-	<script src="<?= base_url(); ?>assets/js/browser.min.js"></script>
-	<script src="<?= base_url(); ?>assets/js/breakpoints.min.js"></script>
-	<script src="<?= base_url(); ?>assets/js/util.js"></script>
-	<script src="<?= base_url(); ?>assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 
