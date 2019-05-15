@@ -110,4 +110,4 @@ $route['default_controller'] = 'Home';
 // $route['home'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
->>>>>>> master
+>>>>>>> dickyrizkigiatama
