@@ -25,7 +25,7 @@
 
 				<!-- Nav -->
 				<nav>
-					<ul> 
+					<ul>
 						<li><a href="#menu">Menu</a></li>
 					</ul>
 				</nav>
@@ -35,21 +35,21 @@
 
 		<!-- Menu -->
 		<nav id="menu">
-			<?php if ($user['role'] == "user") : ?>
 			<h2>Menu</h2>
-			<ul>
-				<li><a href="#">Beranda</a></li>
-				<li><a href="#"><?= $user['username'];?></a></li>
-				<li><a href="#">Keluar</a></li>
-			</ul>
-			<?php elseif($user['role'] == "admin") : ?>
-			<ul>
-				<li><a href="#">Beranda</a></li>
-				<li><a href="#"><?= $user['username'];?></a></li>
-				<li><a href="#">List Pendaftaran</a></li>
-				<li><a href="#">Edit</a></li>
-				<li><a href="#">Keluar</a></li>
-			</ul>
+			<?php if($user['role'] == "user") : ?>
+				<ul>
+					<li><a href="#">Beranda</a></li>
+					<li><a href="#"><?= $user['username'];?></a></li>
+					<li><a href="#">Keluar</a></li>
+				</ul>
+				<?php elseif($user['role'] == "admin") : ?>
+					<ul>
+						<li><a href="#">Beranda</a></li>
+						<li><a href="#"><?= $user['username'];?></a></li>
+						<li><a href="#">List pendaftaran</a></li>
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">Keluar</a></li>
+					</ul>
 			<?php endif;?>
 		</nav>
 
@@ -66,7 +66,10 @@
 				<section class="tiles">
 					<article class="style1">
 						<span class="image">
-							<img src="assets/images/sinarmas.png" alt="" />
+							<a href="<?= base_url('home/detail'); ?>">
+								<img src="assets/images/sinarmas.png" alt="" />
+							</a>
+							
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>Asura</h2>
@@ -78,7 +81,9 @@
 					</article>
 					<article class="style2">
 						<span class="image">
-							<img src="images/bpjs.png" alt="" />
+							<a href="<?= base_url('home/detail'); ?>">
+								<img src="images/bpjs.png" alt="" />
+							</a>
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>BPJS Ketenagakerjaan</h2>
@@ -92,7 +97,9 @@
 					</article>
 					<article class="style3">
 						<span class="image">
-							<img src="images/askrindo.png" alt="" />
+							<a href="<?= base_url('home/detail'); ?>">
+								<img src="images/askrindo.png" alt="" />
+							</a>
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>Askrindo</h2>
@@ -106,7 +113,10 @@
 					</article>
 					<article class="style4">
 						<span class="image">
-							<img src="images/axa.png" alt="" />
+							<a href="<?= base_url('home/detail'); ?>">
+								<img src="images/axa.png" alt="" />
+							</a>
+							
 						</span>
 						<!-- <a href="generic.html"> -->
 						<h2>AXA Mandiri Insurance</h2>
