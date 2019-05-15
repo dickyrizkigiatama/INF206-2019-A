@@ -30,8 +30,4 @@ class Login extends CI_controller
             redirect('login');
         }
     }
-    function logout(){
-        $this->session->session_destroy();
-        redirect('login');
-    }
 }
