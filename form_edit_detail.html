@@ -17,7 +17,11 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
+<<<<<<< HEAD
 									<span class="symbol"><img src="images/Logo.png" alt="" /></span><span class="title">MasiN</span>
+=======
+									<span class="symbol"><img src="images/1.png" alt="" /></span><span class="title">MAsiN</span>
+>>>>>>> Maulana-Hizbullah
 								</a>
 
 							<!-- Nav -->
@@ -31,6 +35,7 @@
 					</header>
 
 				<!-- Menu -->
+<<<<<<< HEAD
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
@@ -56,12 +61,44 @@
 							<p>[perusahaan berlokasi pada daerah]</p>
 						</div>
 					</div>
+=======
+				<nav id="menu">
+					<h2>Menu</h2>
+					<?php if($user['role'] == "user") : ?>
+						<ul>
+							<li><a href="#">Beranda</a></li>
+							<li><a href="#"><?= $user['username'];?></a></li>
+							<li><a href="#">Keluar</a></li>
+						</ul>
+						<?php elseif($user['role'] == "admin") : ?>
+							<ul>
+								<li><a href="#">Beranda</a></li>
+								<li><a href="#"><?= $user['username'];?></a></li>
+								<li><a href="#">List pendaftaran</a></li>
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Keluar</a></li>
+							</ul>
+					<?php endif;?>
+				</nav>
+
+				<!-- Main -->
+					<center>
+					<div id="main">
+						<div class="inner">
+							<a href="<?= base_url('home/detail'); ?>">
+								<img src="assets/images/sinarmas.png" alt="" />
+							</a>
+						</div>
+					</div>
+					</center>
+>>>>>>> Maulana-Hizbullah
 
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
 							<form action="#" method="POST">
 								<div class="form-group">
+<<<<<<< HEAD
 									<label >[Nama perusahaan]</label>
 									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo # ?>" disabled>
 								</div>
@@ -79,6 +116,25 @@
 								</div>
 							</form>
 							<button type="submit" class="button primary">Simpan</button>
+=======
+									<label >Nama Perusahaan :</label>
+									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo # ?>" disabled>
+								</div>
+								<div class="form-group">
+									<label >Informasi Umum Tentang Perusahaan dan Tujuan Perusahaan Asuransi :</label>
+									<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="nama" value="<?php echo # ?>">
+								</div>
+								<div class="form-group">
+									<label >Syarat dan Ketentuan :</label>
+									<input required type="text" class="form-control" placeholder="Syarat dan Ketentuan" name="jurusan" value="<?php echo # ?>">
+								</div>
+								<div class="form-group">
+										<label >Alamat:</label>
+										<input required type="text" class="form-control" placeholder="Alamat terbaru" name="jurusan" value="<?php echo # ?>">
+								</div>
+							</form>
+							<a href="edit_detail.html" class="button primary">Simpan</a>
+>>>>>>> Maulana-Hizbullah
 						</div>
 					</div>
 
