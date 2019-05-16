@@ -1,3 +1,9 @@
+<?php
+require_once "koneksi.php";
+$lihat = $conn->query("select * from lihat");
+// $lihat ubah menjadi $simpan
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -53,19 +59,16 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<center><a href="<?= base_url('home/detail'); ?>">
-								<img src="assets/images/sinarmas.png" alt="" />
-							</a><br>
-							<a href="form_edit_detail.html" class="button primary">Ubah</a></center>
-							<h2>[Nama Perusahaan]</h2>
-							<p>[Informasi umum tentang perusahaan dan tujuan perusahaan asuransi]</p>
-							<p>Syarat dan Ketentuan :</p>
-							<p>1...</p>
-							<p>2...</p>
-							<p>3...</p>
-							<p>4...</p>
-							<p>Alamat :</p>
-							<p>[perusahaan berlokasi pada daerah]</p>
+								<center>
+								<a href="form_edit_detail.php" class="button primary">Ubah</a>
+									<img src="<?=$simpan['image']?>" alt="" /><br>
+								</center>
+								<h2><?=$simpan['judul']?></h2>
+								<p><?=$simpan['isi']?></p>
+								<p><?=$simpan['tujuan']?></p>
+								<p><?=$simpan['sk']?></p>
+								<p>Alamat :</p>
+								<p><?=$simpan['alamat']?></p>
 						</div>
 					</div>
 					

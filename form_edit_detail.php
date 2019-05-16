@@ -1,3 +1,9 @@
+<?php
+require_once "koneksi.php";
+$lihat  = $conn->query("select * from lihat");
+// $lihat ubah menjadi $simpan
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -54,9 +60,7 @@
 					<center>
 					<div id="main">
 						<div class="inner">
-							<a href="<?= base_url('home/detail'); ?>">
-								<img src="assets/images/sinarmas.png" alt="" />
-							</a>
+							<img src="<?=$tampil['image']?>" alt="" />
 						</div>
 					</div>
 					</center>
@@ -64,25 +68,33 @@
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
-							<form action="#" method="POST">
+							<form action="act_ubah_detail_perusahaan.php" method="POST">
 								<div class="form-group">
-									<label >Nama Perusahaan :</label>
-									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo # ?>" disabled>
+									<label >Logo Perusahaan :</label>
+									<input required type="file" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo $simpan['image'] ?>"  accept="image/*">
 								</div>
 								<div class="form-group">
-									<label >Informasi Umum Tentang Perusahaan dan Tujuan Perusahaan Asuransi :</label>
-									<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="nama" value="<?php echo # ?>">
+									<label >Nama Perusahaan :</label>
+									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo $simpan['judul'] ?>">
+								</div>
+								<div class="form-group">
+										<label >Informasi Umum :</label>
+										<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="isi" value="<?php echo $simpan['isi'] ?>">
+									</div>
+								<div class="form-group">
+									<label >Tujuan Perusahaan Asuransi :</label>
+									<input required type="text" class="form-control" placeholder="Enter Tujuan" name="nama" value="<?php echo $simpan['tujuan'] ?>">
 								</div>
 								<div class="form-group">
 									<label >Syarat dan Ketentuan :</label>
-									<input required type="text" class="form-control" placeholder="Syarat dan Ketentuan" name="jurusan" value="<?php echo # ?>">
+									<input required type="text" class="form-control" placeholder="Syarat dan Ketentuan" name="jurusan" value="<?php echo $simpan['sk'] ?>">
 								</div>
 								<div class="form-group">
 										<label >Alamat:</label>
-										<input required type="text" class="form-control" placeholder="Alamat terbaru" name="jurusan" value="<?php echo # ?>">
+										<input required type="text" class="form-control" placeholder="Alamat terbaru" name="jurusan" value="<?php echo $simpan['alamat'] ?>">
 								</div>
+								<button type="submit" class="btn btn-primary">Simpan</button>
 							</form>
-							<a href="edit_detail.html" class="button primary">Simpan</a>
 						</div>
 					</div>
 
