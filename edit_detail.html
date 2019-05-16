@@ -17,7 +17,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/Logo.png" alt="" /></span><span class="title">MasiN</span>
+									<span class="symbol"><img src="images/1.png" alt="" /></span><span class="title">MAsiN</span>
 								</a>
 
 							<!-- Nav -->
@@ -33,20 +33,31 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Beranda</a></li>
-							<li><a href="generic.html">Admin</a></li>
-							<li><a href="generic.html">Pendaftar</a></li>
-							<li><a href="generic.html">Keluar</a></li>
-						</ul>
+						<?php if($user['role'] == "user") : ?>
+							<ul>
+								<li><a href="#">Beranda</a></li>
+								<li><a href="#"><?= $user['username'];?></a></li>
+								<li><a href="#">Keluar</a></li>
+							</ul>
+							<?php elseif($user['role'] == "admin") : ?>
+								<ul>
+									<li><a href="#">Beranda</a></li>
+									<li><a href="#"><?= $user['username'];?></a></li>
+									<li><a href="#">List pendaftaran</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="#">Keluar</a></li>
+								</ul>
+						<?php endif;?>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>[Nama Perusahaan]</h1>
-							<a href="form_edit_detail.html" class="button primary">Ubah</a>
-							<span class="image main"><img src="bpjs.png" alt="" /></span>
+							<center><a href="<?= base_url('home/detail'); ?>">
+								<img src="assets/images/sinarmas.png" alt="" />
+							</a><br>
+							<a href="form_edit_detail.html" class="button primary">Ubah</a></center>
+							<h2>[Nama Perusahaan]</h2>
 							<p>[Informasi umum tentang perusahaan dan tujuan perusahaan asuransi]</p>
 							<p>Syarat dan Ketentuan :</p>
 							<p>1...</p>
