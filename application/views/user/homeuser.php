@@ -61,7 +61,8 @@
 					<h2>Manajemen Asuransi Nelayan <br></h2>
 					<p>MAsiN merupakan web mendaftar asuransi untuk nelayan. Web ini mempermudah nelayan mendaftar
 						asuransi, mengetahui syarat mendaftar dan lokasi dari berbagai perusahaan penyedia
-						jasa asuransi. </p>
+						jasa asuransi.
+					 </p>
 				</header>
 				<section class="tiles">
 					<article class="style1">
