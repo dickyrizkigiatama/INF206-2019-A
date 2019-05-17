@@ -40,7 +40,7 @@
 				<ul>
 					<li><a href="#">Beranda</a></li>
 					<li><a href="#"><?= $user['username'];?></a></li>
-					<li><a href="#">Keluar</a></li>
+					<li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
 				</ul>
 				<?php elseif($user['role'] == "admin") : ?>
 					<ul>
@@ -48,7 +48,7 @@
 						<li><a href="#"><?= $user['username'];?></a></li>
 						<li><a href="#">List pendaftaran</a></li>
 						<li><a href="#">Edit</a></li>
-						<li><a href="#">Keluar</a></li>
+						<li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
 					</ul>
 			<?php endif;?>
 		</nav>
