@@ -60,7 +60,7 @@
 		<div id="main">
 			<div class="inner">
 				<center>
-					<h3 style="margin-bottom:20px;">Tekan Login Untuk Masuk</h3>
+					<h3 style="margin-bottom:20px;">Tekan Login Untuk Masuk ke Website Masin</h3>
 				</center>
 
 				<center>
