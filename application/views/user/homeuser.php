@@ -72,7 +72,7 @@
 							
 						</span>
 						<!-- <a href="generic.html"> -->
-						<h2>Asura</h2>
+						<h2>Asuransu Sinarmas</h2>
 						<div class="content">
 							<p>PT Asuransi Sinar Mas didirikan pada tanggal 27 Mei 1985, PT. Asuransi Sinar Mas (ASM)
 								merupakan salah satu perusahaan asuransi umum terbesar di Indonesia.</p>
