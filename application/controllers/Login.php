@@ -30,4 +30,12 @@ class Login extends CI_controller
             redirect('login');
         }
     }
+<<<<<<< HEAD
+=======
+    function logout(){
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('role');
+                redirect('login');
+    }
+>>>>>>> dicky
 }
