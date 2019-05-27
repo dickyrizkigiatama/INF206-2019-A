@@ -55,13 +55,15 @@ $array=array(
 
 		<!-- Menu -->
 		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.html">Beranda</a></li>
-				<li><a href="generic.html">Nama Pengguna</a></li>
-				<li><a href="generic.html">Keluar</a></li>
-			</ul>
-		</nav>
+						<h2>Menu</h2>
+								<ul>
+									<li><a href="#">Beranda</a></li>
+									<li><a href="#">Admin</a></li>
+									<li><a href="#">List pendaftaran</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
+								</ul>
+						</nav>
 
 		<!-- Main -->
 		<div id="main">

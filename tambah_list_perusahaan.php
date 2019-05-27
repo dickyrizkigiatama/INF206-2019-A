@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "koneksi.php";
 
 $simpan  = $conn->query("select * from lihat");
@@ -60,22 +61,14 @@ $array=array(
 		<!-- Menu -->
 		<nav id="menu">
 						<h2>Menu</h2>
-						<?php if($user['role'] == "user") : ?>
-							<ul>
-								<li><a href="#">Beranda</a></li>
-								<li><a href="#"><?= $user['username'];?></a></li>
-								<li><a href="#">Keluar</a></li>
-							</ul>
-							<?php elseif($user['role'] == "admin") : ?>
 								<ul>
 									<li><a href="#">Beranda</a></li>
-									<li><a href="#"><?= $user['username'];?></a></li>
+									<li><a href="#">Admin</a></li>
 									<li><a href="#">List pendaftaran</a></li>
 									<li><a href="#">Edit</a></li>
-									<li><a href="#">Keluar</a></li>
+									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
 								</ul>
-						<?php endif;?>
-					</nav>
+						</nav>
 
 		<!-- Main -->
 		<div id="main">
