@@ -1,6 +1,9 @@
 <?php
+session_start();
 require_once "koneksi.php";
-$lihat = $conn->query("select * from lihat");
+$judul = $_GET['judul'];
+
+$simpan = $conn->query("SELECT * FROM lihat WHERE judul = $judul ");
 // $lihat ubah menjadi $simpan
 ?>
 
@@ -53,14 +56,13 @@ $lihat = $conn->query("select * from lihat");
 						<div class="inner">
 								<center>
 								<a href="form_edit_detail.php" class="button primary">Ubah</a>
-									<img src="<?=$simpan['image']?>" alt="" /><br>
+								
+									<img src="images/<?=$simpan['gambar']?>" alt="" /><br>
 								</center>
-								<h2><?=$simpan['judul']?></h2>
-								<p><?=$simpan['isi']?></p>
-								<p><?=$simpan['tujuan']?></p>
-								<p><?=$simpan['sk']?></p>
-								<p>Alamat :</p>
-								<p><?=$simpan['alamat']?></p>
+								<div class="form-group">
+                    <label >Nama</label>
+                    <input required type="text" class="form-control" placeholder="Enter Name" name="judul" value="<?php echo $simpan['judul'] ?>">
+                </div>
 						</div>
 					</div>
 					

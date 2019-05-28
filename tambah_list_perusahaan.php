@@ -86,12 +86,11 @@ $array=array(
 				<section class="tiles">
 					<?php $i=1;while($tampil=mysqli_fetch_assoc($simpan)):?>
 						<article class="<?= $array[$i++];?>">
-							<span class="image">
-								<a href="edit_detail.php">
-									<img src="<?=$tampil['image']?>" alt="" />
+							<span class="image"><?php echo "
+								<a href='edit_detail.php?judul=".$tampil['judul']."'>"; ?>
+									<img src="images/<?=$tampil['gambar']?>" alt="" />
 								</a>
 							</span>
-							<!-- <a href="<?=$tampil['href']?>"> -->
 								<h2><?=$tampil['judul']?></h2>
 								<div class="content">
 									<p><?=$tampil['isi']?></p>
@@ -104,7 +103,7 @@ $array=array(
 		</div>
 
 		<!-- <a href='ubah_mahasiswa.php?nim=".$mahasiswa['NIM']."'>Ubah</a>  -->
-
+		
 		<!-- Footer -->
 		<footer id="footer">
 			<center>
