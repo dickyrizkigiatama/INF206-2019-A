@@ -167,16 +167,12 @@
 						<div class="col-lg-6">
 							<form method="post" action="<?= base_url('login/daftar'); ?>">
 								<div class="fields text-center">
-
 									<div class="field">
 										<input type="text" name="username" id="name" placeholder="Masukkan Username">
 									</div>
 
-
 									<div class="field text-center">
 									</div>
-
-
 									<div class="field">
 										<input type="password" name="password" id="password" placeholder=" Masukkan Password ">
 									</div>
