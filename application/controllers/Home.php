@@ -27,4 +27,9 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('user/detail');
 	}
+
+	public function form_pendaftaran_asuransi()
+	{
+		$this->load->view('user/form_pendaftaran_asuransi');
+	}
 }

@@ -38,23 +38,15 @@ $lihat  = $conn->query("select * from lihat");
 
 				<!-- Menu -->
 				<nav id="menu">
-					<h2>Menu</h2>
-					<?php if($user['role'] == "user") : ?>
-						<ul>
-							<li><a href="#">Beranda</a></li>
-							<li><a href="#"><?= $user['username'];?></a></li>
-							<li><a href="#">Keluar</a></li>
-						</ul>
-						<?php elseif($user['role'] == "admin") : ?>
-							<ul>
-								<li><a href="#">Beranda</a></li>
-								<li><a href="#"><?= $user['username'];?></a></li>
-								<li><a href="#">List pendaftaran</a></li>
-								<li><a href="#">Edit</a></li>
-								<li><a href="#">Keluar</a></li>
-							</ul>
-					<?php endif;?>
-				</nav>
+						<h2>Menu</h2>
+								<ul>
+									<li><a href="#">Beranda</a></li>
+									<li><a href="#">Admin</a></li>
+									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
+								</ul>
+						</nav>
 
 				<!-- Main -->
 					<center>

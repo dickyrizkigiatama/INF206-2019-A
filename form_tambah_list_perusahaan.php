@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "koneksi.php";
 
 $simpan  = $conn->query("select * from lihat");
@@ -56,22 +57,14 @@ $array=array(
 		<!-- Menu -->
 		<nav id="menu">
 						<h2>Menu</h2>
-						<?php if($user['role'] == "user") : ?>
-							<ul>
-								<li><a href="#">Beranda</a></li>
-								<li><a href="#"><?= $user['username'];?></a></li>
-								<li><a href="#">Keluar</a></li>
-							</ul>
-							<?php elseif($user['role'] == "admin") : ?>
 								<ul>
 									<li><a href="#">Beranda</a></li>
-									<li><a href="#"><?= $user['username'];?></a></li>
-									<li><a href="#">List pendaftaran</a></li>
+									<li><a href="#">Admin</a></li>
+									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
 									<li><a href="#">Edit</a></li>
-									<li><a href="#">Keluar</a></li>
+									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
 								</ul>
-						<?php endif;?>
-					</nav>
+						</nav>
 
 		<!-- Main -->
 		<div id="main">
@@ -86,10 +79,10 @@ $array=array(
 					</center>
 				</header>
 				<section class="inner">
-					<form action="act_tambah_list_perusahaan.php" method="POST">
+					<form action="act_tambah_list_perusahaan.php" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<label >Logo Perusahaan</label>
-							<input required type="file" class="form-control" placeholder="Enter Logo Perusahaan" name="image" accept="image/*">
+							<input required type="file" class="form-control" placeholder="Enter Logo Perusahaan" name="gambar">
 						</div>
 						<div class="form-group">
 							<label >Nama Perusahaan</label>

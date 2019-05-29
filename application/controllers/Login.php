@@ -31,7 +31,8 @@ class Login extends CI_controller
         }
     }
     function logout(){
-        $this->session->session_destroy();
-        redirect('login');
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('role');
+                redirect('login');
     }
 }
