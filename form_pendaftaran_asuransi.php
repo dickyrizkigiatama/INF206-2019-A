@@ -1,13 +1,13 @@
 <?php
 require_once "koneksi.php";
-$lihat  = $conn->query("select * from lihat");
+$lihat  = $conn->query("SELECT * FROM lihat");
 // $lihat ubah menjadi $simpan
 ?>
 
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Detail Perusahaan Asuransi</title>
+		<title>Formulir Pendaftaran Asuransi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -76,25 +76,101 @@ $lihat  = $conn->query("select * from lihat");
 							<form method="post" action="#">
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
-                                    <h4>Nama :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nama" />
+                                        <h4>Nama Depan :</h4>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nama depan" />
                                     </div>
+
                                     <div class="col-6 col-12-xsmall">
-                                    <h4>Email :</h4>
-                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                        <h4>Nama Belakang :</h4>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nama belakang" />
                                     </div>
+
                                     <div class="col-6 col-12-xsmall">
-                                    <h4>Alamat :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Alamat" />
-                                    </div>
-                                    <div class="col-6 col-12-xsmall">
-                                    <h4>Agama :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Agama" />
+                                        <h4>Tempat Lahir :</h4>
+                                        <input type="text" name="demo-tempatlahir" id="demo-name" value="" placeholder="Tempat lahir" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
-                                    <h4>Tanggal Lahir :</h4>
-                                        <input type="date" name="demo-name" id="demo-name" value="" placeholder="Alamat" />
+                                        <h4>Tanggal Lahir :</h4>
+                                        <input type="date" name="demo-name" id="demo-name" value="" placeholder="Tanggal lahir" />
+                                    </div>
+                                    
+                                    <div class="col-6 col-12-xsmall">
+                                        <h4>Alamat :</h4>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Alamat" />
+                                    </div>
+
+                                    <div class="col-6 col-12-xsmall">
+                                        <h4>Kota/Kabupaten :</h4>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Kota/Kabupaten" />
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h4>Provinsi :</h4>
+                                        <select name="demo-category" id="demo-category">
+                                            <option value="">- Pilih Provinsi -</option>
+                                            <option value="1">Aceh</option>
+                                            <option value="1">Bali</option>
+                                            <option value="1">Banten</option>
+                                            <option value="1">Bengkulu</option>
+                                            <option value="1">Gorontalo</option>
+                                            <option value="1">Jakarta</option>
+                                            <option value="1">Jambi</option>
+                                            <option value="1">Jawa Barat</option>
+                                            <option value="1">Jawa Tengah</option>
+                                            <option value="1">Jawa Timur</option>
+                                            <option value="1">Kalimantan Barat</option>
+                                            <option value="1">Kalimantan Selatan</option>
+                                            <option value="1">Kalimantan Tengah</option>
+                                            <option value="1">Kalimantan Timur</option>
+                                            <option value="1">Kalimantan Utara</option>
+                                            <option value="1">Kepulauan Bangka Belitung</option>
+                                            <option value="1">Kepulauan Riau</option>
+                                            <option value="1">Lampung</option>
+                                            <option value="1">Maluku</option>
+                                            <option value="1">Maluku Utara</option>
+                                            <option value="1">Nusa Tenggara Barat</option>
+                                            <option value="1">Nusa Tenggara Timur</option>
+                                            <option value="1">Papua</option>
+                                            <option value="1">Papua Barat</option>
+                                            <option value="1">Riau</option>
+                                            <option value="1">Sulawesi Barat</option>
+                                            <option value="1">Sulawesi Selatan</option>
+                                            <option value="1">Sulawesi Tengah</option>
+                                            <option value="1">Sulawesi Tenggara</option>
+                                            <option value="1">Sulawesi Utara</option>
+                                            <option value="1">Sumatera Barat</option>
+                                            <option value="1">Sumatera Selatan</option>
+                                            <option value="1">Sumatera Utara</option>
+                                            <option value="1">Yogyakarta</option>
+                                            
+                                        </select>
+                                    </div>
+
+                                    <div class="col-6 col-12-xsmall">
+                                        <h4>Kode Pos : </h4>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Kode pos" />
+                                    </div>
+                                    
+                                    <div class="col-6 col-12-xsmall">
+                                        <h4>No Telepon Rumah :</h4>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="" />
+                                    </div>
+
+                                    <div class="col-6 col-12-xsmall">
+                                        <h4>Email :</h4>
+                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                    </div>
+
+                                    <div class="col-6 col-12-xsmall">
+                                    <h4>Agama :</h4>
+                                        <select name="agama" id="" size="1">
+                                            <option value="">- Pilih Agama -</option>
+                                            <option value="islam">Islam</option>
+                                            <option value="kristen">Kristen</option>
+                                            <option value="hindu">Hindu</option>
+                                            <option value="budha">Budha</option>
+                                        </select> 
                                     </div>
                                     
                                     <div class="col-4">
@@ -131,6 +207,18 @@ $lihat  = $conn->query("select * from lihat");
                                             <option value="1">AIA Financial Indonesia</option>
                                             <option value="1">ACA Asuransi</option>
                                         </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                    <h4>Jenis Identitas :</h4>
+                                        <input type="radio" id="demo-priority-low" name="demo-priority">
+                                        <label for="demo-priority-low">KTP</label>
+
+                                        <input type="radio" id="demo-priority-normal" name="demo-priority">
+                                        <label for="demo-priority-normal">Passport</label>
+
+                                        <input type="radio" id="demo-priority-low" name="demo-priority">
+                                        <label for="demo-priority-low">SIM</label>
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
