@@ -40,7 +40,11 @@
 				<ul>
 					<li><a href="#">Beranda</a></li>
 					<li><a href="#"><?= $user['username'];?></a></li>
+<<<<<<< HEAD
+					<li><a href="#">Keluar</a></li>
+=======
 					<li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
+>>>>>>> dicky
 				</ul>
 				<?php elseif($user['role'] == "admin") : ?>
 					<ul>
@@ -48,7 +52,11 @@
 						<li><a href="#"><?= $user['username'];?></a></li>
 						<li><a href="#">List pendaftaran</a></li>
 						<li><a href="#">Edit</a></li>
+<<<<<<< HEAD
+						<li><a href="#">Keluar</a></li>
+=======
 						<li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
+>>>>>>> dicky
 					</ul>
 			<?php endif;?>
 		</nav>
@@ -61,7 +69,12 @@
 					<h2>Manajemen Asuransi Nelayan <br></h2>
 					<p>MAsiN merupakan web mendaftar asuransi untuk nelayan. Web ini mempermudah nelayan mendaftar
 						asuransi, mengetahui syarat mendaftar dan lokasi dari berbagai perusahaan penyedia
+<<<<<<< HEAD
+						jasa asuransi.
+					 </p>
+=======
 						jasa asuransi. </p>
+>>>>>>> dicky
 				</header>
 				<section class="tiles">
 					<article class="style1">
@@ -72,7 +85,11 @@
 							
 						</span>
 						<!-- <a href="generic.html"> -->
+<<<<<<< HEAD
+						<h2>Asura</h2>
+=======
 						<h2>Asuransu Sinarmas</h2>
+>>>>>>> dicky
 						<div class="content">
 							<p>PT Asuransi Sinar Mas didirikan pada tanggal 27 Mei 1985, PT. Asuransi Sinar Mas (ASM)
 								merupakan salah satu perusahaan asuransi umum terbesar di Indonesia.</p>
