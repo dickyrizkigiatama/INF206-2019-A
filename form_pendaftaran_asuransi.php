@@ -46,13 +46,13 @@ $lihat  = $conn->query("select * from lihat");
                             <li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
                         </ul>
                         <?php elseif($user['role'] == "admin") : ?>
-                            <!-- <ul>
+                            <ul>
                                 <li><a href="#">Beranda</a></li>
                                 <li><a href="#"><?= $user['username'];?></a></li>
                                 <li><a href="#">List pendaftaran</a></li>
                                 <li><a href="#">Edit</a></li>
                                 <li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
-                            </ul> -->
+                            </ul>
                     <?php endif;?>
                 </nav>
 

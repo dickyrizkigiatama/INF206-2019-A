@@ -60,7 +60,7 @@ $array=array(
 								<ul>
 									<li><a href="#">Beranda</a></li>
 									<li><a href="#">Admin</a></li>
-									<li><a href="#">List pendaftaran</a></li>
+									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
 									<li><a href="#">Edit</a></li>
 									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
 								</ul>

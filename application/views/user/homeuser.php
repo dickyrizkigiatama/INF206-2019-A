@@ -65,6 +65,11 @@
 					<p>MAsiN merupakan web mendaftar asuransi untuk nelayan. Web ini mempermudah nelayan mendaftar
 						asuransi, mengetahui syarat mendaftar dan lokasi dari berbagai perusahaan penyedia
 						jasa asuransi. </p>
+						<center>
+						<a href="<?= base_url('form_pendaftaran_asuransi.php'); ?>">
+							<button type="submit" class="btn btn-outline-light">DAFTAR SEKARANG</button>
+						</a>
+						</center>
 				</header>
 				<section class="tiles">
 					<article class="style1">
