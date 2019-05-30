@@ -7,7 +7,7 @@ $lihat  = $conn->query("select * from lihat");
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Detail Perusahaan Asuransi</title>
+		<title>List Pendaftar Asuransi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -53,7 +53,7 @@ $lihat  = $conn->query("select * from lihat");
 			<div class="inner">
 				<header>
 					<center>
-						<h1>Pendatar Asuransi MasiN<br /></h1>
+						<h1>Pendaftar Asuransi MasiN<br /></h1>
 						<h2>Manajemen Asuransi Nelayan <br></h2>
                     </center>
                     <br><br>
