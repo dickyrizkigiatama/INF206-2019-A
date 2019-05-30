@@ -1,28 +1,8 @@
 <?php
+session_start();
 require_once "koneksi.php";
-$lihat  = $conn->query("SELECT * FROM lihat");
+$lihat  = $conn->query("select * from pendaftar");
 // $lihat ubah menjadi $simpan
-
-//cek apakah tombol submit sudah diekan atau belum
-if (isset($_POST["submit"])){
-    //cek apakah data berhasil ditambahkan atau tidak
-    if(daftarAsuransi($_POST) > 0){
-        echo "
-            <script>
-                alert('data berhasil ditambahkan');
-                document.location.href = 'index.php';
-            </script>
-        ";
-    }else{
-        echo "
-            <script>
-                alert('data gagal ditambahkan');
-                document.location.href = 'index.php';
-            </script>
-        ";
-    }
-}
-
 ?>
 
 <!DOCTYPE HTML>
@@ -57,8 +37,8 @@ if (isset($_POST["submit"])){
 						</div>
 					</header>
 
-<!-- Menu -->
-<nav id="menu">
+				<!-- Menu -->
+                <nav id="menu">
                     <h2>Menu</h2>
                     <?php if($user['role'] == "user") : ?>
                         <ul>
@@ -83,8 +63,8 @@ if (isset($_POST["submit"])){
 						<div class="inner">
                         <header>
 					    <center>
-						<h1>Formulir Pendaftaran Asuransi<br /></h1>
-						<h3>Manajemen Asuransi Nelayan <br></h3>
+						<h1>Selamat Datang di Pendaftaran Asuransi MasiN<br /></h1>
+						<h2>Manajemen Asuransi Nelayan <br></h2>
 					    </center>
 				        </header>
 						</div>
@@ -94,177 +74,92 @@ if (isset($_POST["submit"])){
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
-							<form method="post" action="" enctype="multipart/form-data">
+							<form action="act_pendaftaran_asuransi.php" method="POST" enctype="multipart/form-data">
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
-                                        <h4>Nama Depan :</h4>
-                                        <input type="text" name="nama_depan" id="demo-name" value="" placeholder="Nama depan" />
+                                    <h4>Nama :</h4>
+                                        <input type="text" name="nama" class="form-control" placeholder="Nama" />
                                     </div>
-
                                     <div class="col-6 col-12-xsmall">
-                                        <h4>Nama Belakang :</h4>
-                                        <input type="text" name="nama_belakang" id="demo-name" value="" placeholder="Nama belakang" />
+                                    <h4>Email :</h4>
+                                        <input type="email" name="email" class="form-control" placeholder="Email" />
                                     </div>
-
                                     <div class="col-6 col-12-xsmall">
-                                        <h4>Tempat Lahir :</h4>
-                                        <input type="text" name="tempat_tempatlahir" id="demo-name" value="" placeholder="Tempat lahir" />
+                                    <h4>Alamat :</h4>
+                                        <input type="text" name="alamat" class="form-control" placeholder="Alamat" />
                                     </div>
-                                    
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>Tanggal Lahir :</h4>
-                                        <input type="date" name="tanggal_lahir" id="demo-name" value="" placeholder="Tanggal lahir" />
-                                    </div>
-                                    
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>Alamat :</h4>
-                                        <input type="text" name="alamat" id="demo-name" value="" placeholder="Alamat" />
-                                    </div>
-
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>Kota/Kabupaten :</h4>
-                                        <input type="text" name="kota" id="demo-name" value="" placeholder="Kota/Kabupaten" />
-                                    </div>
-
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>Provinsi :</h4>
-                                        <select name="provinsi" id="demo-category">
-                                            <option value="">- Pilih Provinsi -</option>
-                                            <option value="aceh">Aceh</option>
-                                            <option value="bali">Bali</option>
-                                            <option value="banten">Banten</option>
-                                            <option value="bengkulu">Bengkulu</option>
-                                            <option value="gorontalo">Gorontalo</option>
-                                            <option value="jakarta">Jakarta</option>
-                                            <option value="jambi">Jambi</option>
-                                            <option value="jabar">Jawa Barat</option>
-                                            <option value="jateng">Jawa Tengah</option>
-                                            <option value="jatim">Jawa Timur</option>
-                                            <option value="kalbar">Kalimantan Barat</option>
-                                            <option value="kalsel">Kalimantan Selatan</option>
-                                            <option value="kalteng">Kalimantan Tengah</option>
-                                            <option value="kaltim">Kalimantan Timur</option>
-                                            <option value="kalut">Kalimantan Utara</option>
-                                            <option value="belitung">Kepulauan Bangka Belitung</option>
-                                            <option value="kriau">Kepulauan Riau</option>
-                                            <option value="lampung">Lampung</option>
-                                            <option value="maluku">Maluku</option>
-                                            <option value="maluku utara">Maluku Utara</option>
-                                            <option value="ntb">Nusa Tenggara Barat</option>
-                                            <option value="ntt">Nusa Tenggara Timur</option>
-                                            <option value="papua">Papua</option>
-                                            <option value="papua barat">Papua Barat</option>
-                                            <option value="riau">Riau</option>
-                                            <option value="sulbar">Sulawesi Barat</option>
-                                            <option value="sulsel">Sulawesi Selatan</option>
-                                            <option value="sultengah">Sulawesi Tengah</option>
-                                            <option value="sultenggara">Sulawesi Tenggara</option>
-                                            <option value="sulutara">Sulawesi Utara</option>
-                                            <option value="sumbar">Sumatera Barat</option>
-                                            <option value="sumsel">Sumatera Selatan</option>
-                                            <option value="sumut">Sumatera Utara</option>
-                                            <option value="yogya">Yogyakarta</option>
-                                            
-                                        </select>
-                                    </div>
-
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>Kode Pos : </h4>
-                                        <input type="text" name="kodepos" id="demo-name" value="" placeholder="Kode pos" />
-                                    </div>
-                                    
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>No Telepon Rumah :</h4>
-                                        <input type="text" name="telp_rumah" id="demo-name" value="" placeholder="" />
-                                    </div>
-
-                                    <div class="col-6 col-12-xsmall">
-                                        <h4>Email :</h4>
-                                        <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
-                                    </div>
-
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Agama :</h4>
-                                        <select name="agama" id="" size="1">
-                                            <option value="">- Pilih Agama -</option>
-                                            <option value="islam">Islam</option>
-                                            <option value="kristen">Kristen</option>
-                                            <option value="hindu">Hindu</option>
-                                            <option value="budha">Budha</option>
-                                        </select> 
+                                        <input type="text" name="agama" class="form-control" placeholder="Agama" />
                                     </div>
                                     
-                                    <div class="col-6">
+                                    <div class="col-6 col-12-xsmall">
+                                    <h4>Tanggal Lahir :</h4>
+                                        <input type="date" name="ttl" class="form-control" placeholder="Alamat" />
+                                    </div>
+                                    
+                                    <div class="col-4">
                                     <h4>Jenis kelamin :</h4>
-                                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                        <label for="demo-priority-low">Laki-Laki</label>
-
-                                        <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                        <label for="demo-priority-normal">Perempuan</label>
+                                        <span>
+                                            <input required type="radio" id="demo-priority-low" value="Laki-Laki" name="jk" checked />
+                                            <label for="demo-priority-low">Laki-Laki</label>
+                                        </span>
+                                        <span>
+                                            <input required type="radio" id="demo-priority-normal" value="Perempuan" name="jk" />
+                                            <label for="demo-priority-normal">Perempuan</label>
+                                        </span>    
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>No.HP :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="08xxxxxxxxxx" />
+                                        <input type="text" name="nohp" class="form-control" placeholder="08xxxxxxxxxx" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Pekerjaan :</h4>
-                                        <input type="text" name="pekerjaan" id="demo-name" value="" placeholder="Nelayan" />
+                                        <input type="text" name="pekerjaan" class="form-control" placeholder="Nelayan" />
                                     </div>
                                     
                                     <div class="col-12">
-                                        <select name="pilih_asuransi" id="demo-category">
+                                        <select name="asuransi" id="asuransi">
                                             <option value="">- Pilih Asuransi Terbaikmu -</option>
-                                            <option value="1">Asuransi Sinarmas</option>
-                                            <option value="1">BPJS Ketenagakerjaan</option>
-                                            <option value="1">AXA Mandiri Insurance</option>
-                                            <option value="1">Allianz Life Indonesia</option>
-                                            <option value="1">Aspan General Insurance</option>
-                                            <option value="1">Asuransi Jiwasraya</option>
-                                            <option value="1">Asuransi Tri Pakarta</option>
-                                            <option value="1">Bumiputera 1912</option>
-                                            <option value="1">Prudential Insurance</option>
-                                            <option value="1">AIA Financial Indonesia</option>
-                                            <option value="1">ACA Asuransi</option>
+                                            <option value="Asuransi Sinarmas1">Asuransi Sinarmas</option>
+                                            <option value="BPJS Ketenagakerjaan">BPJS Ketenagakerjaan</option>
+                                            <option value="AXA Mandiri Insurance">AXA Mandiri Insurance</option>
+                                            <option value="Allianz Life Indonesia">Allianz Life Indonesia</option>
+                                            <option value="Aspan General Insurance">Aspan General Insurance</option>
+                                            <option value="Asuransi Jiwasraya">Asuransi Jiwasraya</option>
+                                            <option value="Asuransi Tri Pakarta">Asuransi Tri Pakarta</option>
+                                            <option value="Bumiputera 1912">Bumiputera 1912</option>
+                                            <option value="Prudential Insurance">Prudential Insurance</option>
+                                            <option value="AIA Financial Indonesia">AIA Financial Indonesia</option>
+                                            <option value="ACA Asuransi">ACA Asuransi</option>
                                         </select>
                                     </div>
 
-                                    <div class="col-6">
-                                    <h4>Jenis Identitas :</h4>
-                                        <input type="radio" id="demo-priority-low" name="demo-priority">
-                                        <label for="demo-priority-low">KTP</label>
-
-                                        <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                        <label for="demo-priority-normal">Passport</label>
-
-                                        <input type="radio" id="demo-priority-low" name="demo-priority">
-                                        <label for="demo-priority-low">SIM</label>
-                                    </div>
-
                                     <div class="col-6 col-12-xsmall">
-                                    <h4>No Identitas :</h4>
-                                        <input type="text" name="no_id" id="demo-name" value="" placeholder="Nomor Induk Kependudukan" />
+                                    <h4>NIK :</h4>
+                                        <input type="text" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Foto Diri :</h4>
-                                        <input type="file" name="foto_diri" id="foto_diri" value="" />
+                                        <input type="file" name="foto" id="demo-name" value="" />
                                     </div>
-
-                                </div>
+                                </div><br><br>
+                                <center>
+                                    <div class="inner">
+                                        <span class="actions">
+                                            <input type="submit" value="Daftar" class="primary" />
+                                            <a href="form_pendaftaran_asuransi.php"><input type="reset" value="Reset" /></a>
+                                        </span><br><br>
+                                        <a href="homeuser" class="button">Kembali ke Beranda</a>
+                                    </div>
+                                </center>
                             </form>
                         </div>
-                        <center>
-                            <div class="inner">
-                                <span class="actions">
-                                    <button type ="submit" name="submit" class="primary">DAFTAR</button>
-                                    <a href="form_pendaftaran_asuransi.php"><input type="reset" value="Reset" /></a>
-                                </span>
-                            </div>
-                        </center>
+                        
                     </div>
-                    
                     
 
 				<!-- Footer -->
