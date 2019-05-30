@@ -3,26 +3,6 @@ require_once "koneksi.php";
 $lihat  = $conn->query("SELECT * FROM lihat");
 // $lihat ubah menjadi $simpan
 
-//cek apakah tombol submit sudah diekan atau belum
-if (isset($_POST["submit"])){
-    //cek apakah data berhasil ditambahkan atau tidak
-    if(daftarAsuransi($_POST) > 0){
-        echo "
-            <script>
-                alert('data berhasil ditambahkan');
-                document.location.href = 'index.php';
-            </script>
-        ";
-    }else{
-        echo "
-            <script>
-                alert('data gagal ditambahkan');
-                document.location.href = 'index.php';
-            </script>
-        ";
-    }
-}
-
 ?>
 
 <!DOCTYPE HTML>
@@ -94,36 +74,36 @@ if (isset($_POST["submit"])){
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
-							<form method="post" action="" enctype="multipart/form-data">
+							<form method="post" action="act_form_pendaftaran_asuransi" enctype="multipart/form-data">
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Nama Depan :</h4>
-                                        <input type="text" name="nama_depan" id="demo-name" value="" placeholder="Masukkan nama depan Anda" />
+                                        <input type="text" class="form-control" name="nama_depan" id="demo-name" value="" placeholder="Masukkan nama depan Anda" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Nama Belakang :</h4>
-                                        <input type="text" name="nama_belakang" id="demo-name" value="" placeholder="Masukkan nama belakang Anda" />
+                                        <input type="text" class="form-control" name="nama_belakang" id="demo-name" value="" placeholder="Masukkan nama belakang Anda" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Tempat Lahir :</h4>
-                                        <input type="text" name="tempat_tempatlahir" id="demo-name" value="" placeholder="Masukkan tempat lahir Anda" />
+                                        <input type="text" class="form-control" name="tempat_tempatlahir" id="demo-name" value="" placeholder="Masukkan tempat lahir Anda" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Tanggal Lahir :</h4>
-                                        <input type="date" name="tanggal_lahir" id="demo-name" value="" placeholder="Masukkan tanggal lahir Anda" />
+                                        <input type="date" class="form-control" name="tanggal_lahir" id="demo-name" value="" placeholder="Masukkan tanggal lahir Anda" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Alamat :</h4>
-                                        <input type="text" name="alamat" id="demo-name" value="" placeholder="Masukkan alamat Anda" />
+                                        <input type="text" class="form-control" name="alamat" id="demo-name" value="" placeholder="Masukkan alamat Anda" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Kota/Kabupaten :</h4>
-                                        <input type="text" name="kota" id="demo-name" value="" placeholder="Kota/Kabupaten" />
+                                        <input type="text" class="form-control" name="kota" id="demo-name" value="" placeholder="Kota/Kabupaten" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
@@ -170,17 +150,17 @@ if (isset($_POST["submit"])){
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Kode Pos : </h4>
-                                        <input type="text" name="kodepos" id="demo-name" value="" placeholder="Masukkan kode pos" />
+                                        <input type="text" class="form-control" name="kodepos" id="demo-name" value="" placeholder="Masukkan kode pos" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                         <h4>No Telepon Rumah :</h4>
-                                        <input type="text" name="telp_rumah" id="demo-name" value="" placeholder="Masukkan no telepon rumah (jika ada)" />
+                                        <input type="text" class="form-control" name="telp_rumah" id="demo-name" value="" placeholder="Masukkan no telepon rumah (jika ada)" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Email :</h4>
-                                        <input type="email" name="email" id="demo-email" value="" placeholder="Masukkan email anda" />
+                                        <input type="email" class="form-control" name="email" id="demo-email" value="" placeholder="Masukkan email anda" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
@@ -205,12 +185,12 @@ if (isset($_POST["submit"])){
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>No.HP :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="08xxxxxxxxxx" />
+                                        <input type="text" class="form-control" name="demo-name" id="demo-name" value="" placeholder="08xxxxxxxxxx" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Pekerjaan :</h4>
-                                        <input type="text" name="pekerjaan" id="demo-name" value="" placeholder="Nelayan" />
+                                        <input type="text" class="form-control" name="pekerjaan" id="demo-name" value="" placeholder="Nelayan" />
                                     </div>
                                     
                                     <div class="col-12">
@@ -244,12 +224,12 @@ if (isset($_POST["submit"])){
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>No Identitas :</h4>
-                                        <input type="text" name="no_id" id="demo-name" value="" placeholder="Nomor Induk Kependudukan" />
+                                        <input type="text" class="form-control" name="no_id" id="demo-name" value="" placeholder="Nomor Induk Kependudukan" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Foto Diri :</h4>
-                                        <input type="file" name="foto_diri" id="foto_diri" value="" />
+                                        <input type="file" class="form-control" name="foto_diri" id="foto_diri" value="" />
                                     </div>
 
                                 </div>
