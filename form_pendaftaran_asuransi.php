@@ -78,37 +78,37 @@ $lihat  = $conn->query("SELECT * FROM lihat");
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Nama Depan :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nama depan" />
+                                        <input type="text" name="nama_depan" id="demo-name" value="" placeholder="Nama depan" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Nama Belakang :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nama belakang" />
+                                        <input type="text" name="nama_belakang" id="demo-name" value="" placeholder="Nama belakang" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Tempat Lahir :</h4>
-                                        <input type="text" name="demo-tempatlahir" id="demo-name" value="" placeholder="Tempat lahir" />
+                                        <input type="text" name="tempat_tempatlahir" id="demo-name" value="" placeholder="Tempat lahir" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Tanggal Lahir :</h4>
-                                        <input type="date" name="demo-name" id="demo-name" value="" placeholder="Tanggal lahir" />
+                                        <input type="date" name="tanggal_lahir" id="demo-name" value="" placeholder="Tanggal lahir" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Alamat :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Alamat" />
+                                        <input type="text" name="alamat" id="demo-name" value="" placeholder="Alamat" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Kota/Kabupaten :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Kota/Kabupaten" />
+                                        <input type="text" name="kota" id="demo-name" value="" placeholder="Kota/Kabupaten" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Provinsi :</h4>
-                                        <select name="demo-category" id="demo-category">
+                                        <select name="provinsi" id="demo-category">
                                             <option value="">- Pilih Provinsi -</option>
                                             <option value="aceh">Aceh</option>
                                             <option value="bali">Bali</option>
@@ -150,17 +150,17 @@ $lihat  = $conn->query("SELECT * FROM lihat");
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Kode Pos : </h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Kode pos" />
+                                        <input type="text" name="kodepos" id="demo-name" value="" placeholder="Kode pos" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                         <h4>No Telepon Rumah :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="" />
+                                        <input type="text" name="telp_rumah" id="demo-name" value="" placeholder="" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Email :</h4>
-                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                        <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
@@ -190,11 +190,11 @@ $lihat  = $conn->query("SELECT * FROM lihat");
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Pekerjaan :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nelayan" />
+                                        <input type="text" name="pekerjaan" id="demo-name" value="" placeholder="Nelayan" />
                                     </div>
                                     
                                     <div class="col-12">
-                                        <select name="demo-category" id="demo-category">
+                                        <select name="pilih_asuransi" id="demo-category">
                                             <option value="">- Pilih Asuransi Terbaikmu -</option>
                                             <option value="1">Asuransi Sinarmas</option>
                                             <option value="1">BPJS Ketenagakerjaan</option>
@@ -224,12 +224,12 @@ $lihat  = $conn->query("SELECT * FROM lihat");
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>No Identitas :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nomor Induk Kependudukan" />
+                                        <input type="text" name="no_id" id="demo-name" value="" placeholder="Nomor Induk Kependudukan" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Foto Diri :</h4>
-                                        <input type="file" name="demo-name" id="demo-name" value="" />
+                                        <input type="file" name="foto_diri" id="demo-name" value="" />
                                     </div>
 
                                 </div>

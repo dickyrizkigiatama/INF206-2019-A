@@ -30,5 +30,9 @@ function daftarAsuransi(){
     $namabelakang = htmlspecialchars($data["nama_belakang"]);
     $tempatlahir = htmlspecialchars($data["tempat_lahir"]);
     $tanggallahir = htmlspecialchars($data["tanggal_lahir"]);
+    $tanggallahir = htmlspecialchars($data["tanggal_lahir"]);
+    $alamat = htmlspecialchars($data["alamat"]);
+    $kota = htmlspecialchars($data["kota"]);
+    $provinsi = htmlspecialchars($data["provinsi"]);
+    $kodepos = htmlspecialchars($data["kodepos"]);
 }
-?>
