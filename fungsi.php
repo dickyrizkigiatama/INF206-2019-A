@@ -23,6 +23,15 @@ if(isset($_POST['login'])){
 }else{
     header("Location: masukUser.html");
     exit;
+
+
+function daftarAsuransi(){
+    global $koneksi;
+    $namadepan = htmlspecialchars($data["nama_depan"]);
+    $namabelakang = htmlspecialchars($data["nama_belakang"]);
+    $tempatlahir = htmlspecialchars($data["tempat_lahir"]);
+    $tanggallahir = htmlspecialchars($data["tanggal_lahir"]);
+}
 =======
 <?php
 $koneksi=mysqli_connect("localhost","root","","masin");
