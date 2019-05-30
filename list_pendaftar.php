@@ -14,7 +14,7 @@ $lihat  = $conn->query("select * from lihat");
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
     
-	<body class="loader-active">
+	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
