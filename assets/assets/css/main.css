@@ -102,7 +102,7 @@ input, select, textarea {
 		background: #ffffff;
 	}
 
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		/*body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
@@ -111,7 +111,7 @@ input, select, textarea {
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
 			transition: none !important;
-		}
+		}*/
 
 /* Type */
 
@@ -2733,13 +2733,13 @@ input, select, textarea {
 			margin-top: 2em;
 		}
 
-		body.is-preload .tiles article {
+		/*body.is-preload .tiles article {
 			-moz-transform: scale(0.9);
 			-webkit-transform: scale(0.9);
 			-ms-transform: scale(0.9);
 			transform: scale(0.9);
 			opacity: 0;
-		}
+		}*/
 
 		body.is-touch .tiles article .content {
 			max-height: 15em;
