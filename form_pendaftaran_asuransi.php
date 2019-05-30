@@ -1,14 +1,34 @@
-
 <?php
 require_once "koneksi.php";
 $lihat  = $conn->query("SELECT * FROM lihat");
 // $lihat ubah menjadi $simpan
+
+//cek apakah tombol submit sudah diekan atau belum
+if (isset($_POST["submit"])){
+    //cek apakah data berhasil ditambahkan atau tidak
+    if(daftarAsuransi($_POST) > 0){
+        echo "
+            <script>
+                alert('data berhasil ditambahkan');
+                document.location.href = 'index.php';
+            </script>
+        ";
+    }else{
+        echo "
+            <script>
+                alert('data gagal ditambahkan');
+                document.location.href = 'index.php';
+            </script>
+        ";
+    }
+}
+
 ?>
 
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Formulir Pendaftaran Asuransi</title>
+		<title>Detail Perusahaan Asuransi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -37,8 +57,8 @@ $lihat  = $conn->query("SELECT * FROM lihat");
 						</div>
 					</header>
 
-				<!-- Menu -->
-                <nav id="menu">
+<!-- Menu -->
+<nav id="menu">
                     <h2>Menu</h2>
                     <?php if($user['role'] == "user") : ?>
                         <ul>
@@ -74,7 +94,7 @@ $lihat  = $conn->query("SELECT * FROM lihat");
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
-							<form method="post" action="#">
+							<form method="post" action="" enctype="multipart/form-data">
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
                                         <h4>Nama Depan :</h4>
@@ -229,7 +249,7 @@ $lihat  = $conn->query("SELECT * FROM lihat");
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Foto Diri :</h4>
-                                        <input type="file" name="foto_diri" id="demo-name" value="" />
+                                        <input type="file" name="foto_diri" id="foto_diri" value="" />
                                     </div>
 
                                 </div>
@@ -238,7 +258,7 @@ $lihat  = $conn->query("SELECT * FROM lihat");
                         <center>
                             <div class="inner">
                                 <span class="actions">
-                                    <input type="submit" value="Daftar" class="primary" />
+                                    <button type ="submit" name="submit" class="primary">DAFTAR</button>
                                     <a href="form_pendaftaran_asuransi.php"><input type="reset" value="Reset" /></a>
                                 </span>
                             </div>

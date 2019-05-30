@@ -29,8 +29,6 @@ class Home extends CI_Controller {
 		$this->load->view('user/detail');
 	}
 }
-=======
-<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
@@ -60,4 +58,3 @@ class Home extends CI_Controller {
 		$this->load->view('user/detail');
 	}
 }
->>>>>>> Anggi
