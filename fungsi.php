@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 $koneksi=mysqli_connect("localhost","root","","masin");
 if(isset($_POST['login'])){
