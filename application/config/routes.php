@@ -54,8 +54,7 @@ $route['default_controller'] = 'Home';
 // $route['home'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-=======
-<?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -110,4 +109,3 @@ $route['default_controller'] = 'Home';
 // $route['home'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
->>>>>>> Anggi

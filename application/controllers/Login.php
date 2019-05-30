@@ -32,8 +32,7 @@ class Login extends CI_controller
         }
     }
 }
-=======
-<?php
+
 class Login extends CI_controller
 {
     public function __construct()
@@ -70,4 +69,3 @@ class Login extends CI_controller
         redirect('login');
     }
 }
->>>>>>> Anggi
