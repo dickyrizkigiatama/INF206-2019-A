@@ -16,8 +16,16 @@ $lihat  = $conn->query("select * from lihat");
     
 	<body class="loader-active">
 
+    <!--== Preloader Area Start ==-->
+    <div class="preloader">
+            <div class="preloader-spinner">
+                <div class="loader-content">
+                    <img src="assets/images/preloader.gif" alt="JSOFT">
+                </div>
+            </div>
+        </div>
+        <!--== Preloader Area End ==-->
 
-    
 		<!-- Wrapper -->
 			<div id="wrapper">
 
