@@ -1,19 +1,44 @@
 <?php
 require_once "koneksi.php";
+<<<<<<< HEAD
 $lihat  = $conn->query("select * from pendaftar");
+=======
+$lihat  = $conn->query("select * from lihat");
+>>>>>>> Anggi
 // $lihat ubah menjadi $simpan
 ?>
 
 <!DOCTYPE HTML>
 <html>
 	<head>
+<<<<<<< HEAD
 		<title>Detail Perusahaan Asuransi</title>
+=======
+		<title>List Pendaftar Asuransi</title>
+>>>>>>> Anggi
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<<<<<<< HEAD
 	</head>
 	<body class="is-preload">
+=======
+    </head>
+    
+	<body class="loader-active">
+
+    <!--== Preloader Area Start ==-->
+    <div class="preloader">
+            <div class="preloader-spinner">
+                <div class="loader-content">
+                    <img src="assets/images/preloader.gif" alt="JSOFT">
+                </div>
+            </div>
+        </div>
+        <!--== Preloader Area End ==-->
+
+>>>>>>> Anggi
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -50,10 +75,17 @@ $lihat  = $conn->query("select * from pendaftar");
 
     <!-- Main -->
 		<div id="main">
+<<<<<<< HEAD
 			<div>
 				<header>
 					<center>
 						<h1>Pendatar Asuransi MasiN<br /></h1>
+=======
+			<div class="inner">
+				<header>
+					<center>
+						<h1>Pendaftar Asuransi MasiN<br /></h1>
+>>>>>>> Anggi
 						<h2>Manajemen Asuransi Nelayan <br></h2>
                     </center>
                     <br><br>
@@ -64,6 +96,7 @@ $lihat  = $conn->query("select * from pendaftar");
 										<table>
 											<thead>
 												<tr>
+<<<<<<< HEAD
                                                 <th><center>No</center></th>
                                                 <th><center>Nama</center></th>
                                                 <th><center>Email</center></th>
@@ -100,6 +133,42 @@ $lihat  = $conn->query("select * from pendaftar");
                                                 $no++;
                                                 }
                                                 ?>
+=======
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>Tempat, Tanggal Lahir</th>
+                                                <th>Pekerjaan</th>
+                                                <th>Alamat</th>
+                                                <th>Kode Pos</th>
+                                                <th>Kota/Kabupaten</th>
+                                                <th>Nomor HP</th>
+                                                <th>Alamat E-mail</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Anggi</td>
+                                                    <td>Banda Aceh, 29/9/1999</td>
+                                                    <td>mahasiswa</td>
+                                                    <td>Peniti</td>
+                                                    <td>-</td>
+                                                    <td>banda Aceh</td>
+                                                    <td>082360164696</td>
+                                                    <td>anggi@gmail.com</td>
+												</tr>
+												<tr>
+                                                <td>2</td>
+													<td>Anggi</td>
+                                                    <td>Banda Aceh, 29/9/1999</td>
+                                                    <td>mahasiswa</td>
+                                                    <td>Peniti</td>
+                                                    <td>-</td>
+                                                    <td>banda Aceh</td>
+                                                    <td>082360164696</td>
+                                                    <td>anggi@gmail.com</td>
+												</tr>
+>>>>>>> Anggi
 											</tbody>
 											<!-- <tfoot>
 												<tr>
@@ -171,4 +240,8 @@ $lihat  = $conn->query("select * from pendaftar");
         <script src="assets/js/main.js"></script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> Anggi
