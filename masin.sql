@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2019 at 06:01 PM
+-- Generation Time: May 31, 2019 at 09:30 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -76,15 +76,6 @@ CREATE TABLE `pendaftar` (
   `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `pendaftar`
---
-
-INSERT INTO `pendaftar` (`id_asuransi`, `id`, `nama`, `email`, `alamat`, `agama`, `ttl`, `jk`, `nohp`, `pekerjaan`, `asuransi`, `nik`, `foto`) VALUES
-(1, 0, 'Maulana Hizbullah', 'hizbullahmaulana1@gmail.com', 'langsa', 'islam', '2019-05-08', 'Laki-Laki', '082360164696', 'nelayan', 'Asuransi Jiwasraya', '121212121212', 'LOGO RESMI UNSYIAH.png'),
-(2, 0, 'faris', 'faris@gmail.com', 'Banda Aceh', 'islam', '2019-05-09', 'Laki-Laki', '082360164696', 'nelayan', 'ACA Asuransi', '1313131313131', 'LOGO HMIF.png'),
-(3, 0, 'dicki', 'dicki@gmail.com', 'takengon', 'islam', '2019-05-14', 'Perempuan', '082360164696', 'nelayan', 'Asuransi Jiwasraya', '141414141414', 'LOGO HMTP.tif');
-
 -- --------------------------------------------------------
 
 --
@@ -121,8 +112,7 @@ INSERT INTO `perusahaan` (`id`, `gambar`, `nama`, `deskripsi`, `alamat`, `notelp
 (9, 'bumiputera.png', 'Bumiputera 1912', 'AJB Bumiputera 1912 adalah perusahaan asuransi terkemuka di Indonesia. Didirikan 103 tahun yang lalu untuk memenuhi kebutuhan spesifik masyarakat Indonesia, AJB Bumiputera 1912 telah berkembang untuk mengikuti perubahan kebutuhan masyarakat. Pendekatan modern, produk yang beragam, serta teknologi mutakhir yang ditawarkan didukung oleh nilai-nilai tradisional yang melandasi pendirian AJB Bumiputera 1912', 'banda aceh', 0, 'erffer', 'ferefr', 'erferf', 'erffer', 'eqwqwe'),
 (10, 'prudential.png', 'Prudential Insurance', 'Didirikan pada tahun 1995, PT Prudential Life Assurance (Prudential Indonesia) merupakan bagian dari Prudential plc, sebuah grup perusahaan jasa keuangan terkemuka di Inggris. Sebagai bagian dari Grup yang berpengalaman lebih dari 168 tahun di industri asuransi jiwa, Prudential Indonesia memiliki komitmen untuk mengembangkan bisnisnya di Indonesia.', 'banda aceh', 0, 'ewqeqw', 'qweewq', 'qwewqe', 'qweqew', 'eqwewq'),
 (11, 'aia.png', 'AIA Financial Indonesia', 'AIA Financial merupakan salah satu perusahaan asuransi jiwa terkemuka di Indonesia dan merupakan perusahaan asuransi jiwa yang terdaftar dan serta diawasi oleh Otoritas Jasa Keuangan. AIA Financial merupakan anak perusahaan dari AIA Group. AIA menawarkan berbagai produk asuransi, termasuk asuransi dengan prinsip syariah, yang meliputi asuransi jiwa, asuransi kesehatan, asuransi kecelakaan diri, asuransi yang dikaitkan dengan investasi, program kesejahteraan karyawan, program pesangon, dan program Dana Pensiun (DPLK).', 'banda aceh', 0, 'dfgfdg', 'fgbfg', 'nghngh', 'vcvcx', 'vxcvcx'),
-(12, 'aca.png', 'ACA Asuransi', 'PT. Asuransi Central Asia (ACA) berdiri pada tanggal 29 Agustus 1956 dengan nama Maskapai Asuransi Oriental N.V. Pada tanggal 5 Agustus 1958 nama perusahaan berubah menjadi PT Asuransi Central Asia (ACA). Sejak berdiri hingga saat ini, ACA telah memainkan peran yang tak terpisahkan dalam pembangunan perekonomian Indonesia. ACA meneruskan tradisi selama lebih dari 52 tahun memberikan kontribusi dalam asuransi dan perekonomian khususnya asuransi umum.', 'banda aceh', 0, 'dsadsa', 'sdaasd', 'sdaasd', 'dasdas', 'sdasda'),
-(15, 'LOGO HMIF.png', 'informatika', 'Unsyiah Donor Darah', '', 0, '', '', '', '', '');
+(12, 'aca.png', 'ACA Asuransi', 'PT. Asuransi Central Asia (ACA) berdiri pada tanggal 29 Agustus 1956 dengan nama Maskapai Asuransi Oriental N.V. Pada tanggal 5 Agustus 1958 nama perusahaan berubah menjadi PT Asuransi Central Asia (ACA). Sejak berdiri hingga saat ini, ACA telah memainkan peran yang tak terpisahkan dalam pembangunan perekonomian Indonesia. ACA meneruskan tradisi selama lebih dari 52 tahun memberikan kontribusi dalam asuransi dan perekonomian khususnya asuransi umum.', 'banda aceh', 0, 'dsadsa', 'sdaasd', 'sdaasd', 'dasdas', 'sdasda');
 
 -- --------------------------------------------------------
 
@@ -146,7 +136,8 @@ INSERT INTO `user` (`id`, `username`, `password`, `role`) VALUES
 (4, 'putramaghfirah', '$2y$10$lrpULQxBBe1hKmL9m71b/uqWbOsTK6FB8VG3jO46/j5NB16YVjOHy', 'user'),
 (5, 'dicky', '$2y$10$ia5.MnO8.Xepegvw1FO9x.xwwasUBqjuGpXHkUO9iZbtFyTecCc1W', 'user'),
 (6, 'hizbullahmaulana1@gmail.com', '$2y$10$Ni5/A0TeedU65X/s8bPZ/O7kp1SXKdEu3c/VxOTh9Kr.8FhWss5/G', 'admin'),
-(8, 'maulana', '$2y$10$BAn60BRw0GoYT1k6HzxAtexfOKattkI66GC28hfUFEqHak06nWaAG', 'user');
+(8, 'maulana', '$2y$10$BAn60BRw0GoYT1k6HzxAtexfOKattkI66GC28hfUFEqHak06nWaAG', 'user'),
+(9, 'user', '$2y$10$E1mRJYKjy1lj4NxJHyiV5uii7bs8mLxUeOK8mGbXCCgKsaQJ34Bgm', 'user');
 
 --
 -- Indexes for dumped tables
@@ -178,19 +169,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `pendaftar`
 --
 ALTER TABLE `pendaftar`
-  MODIFY `id_asuransi` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_asuransi` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

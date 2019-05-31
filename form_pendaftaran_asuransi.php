@@ -40,21 +40,10 @@ $lihat  = $conn->query("select * from pendaftar");
 				<!-- Menu -->
                 <nav id="menu">
                     <h2>Menu</h2>
-                    <?php if($user['role'] == "user") : ?>
-                        <ul>
-                            <li><a href="#">Beranda</a></li>
-                            <li><a href="#"><?= $user['username'];?></a></li>
-                            <li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
-                        </ul>
-                        <?php elseif($user['role'] == "admin") : ?>
-                            <ul>
-                                <li><a href="#">Beranda</a></li>
-                                <li><a href="#"><?= $user['username'];?></a></li>
-                                <li><a href="#">List pendaftaran</a></li>
-                                <li><a href="#">Edit</a></li>
-                                <li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
-                            </ul>
-                    <?php endif;?>
+                    <ul>
+                        <li><a href="../">Beranda</a></li>
+                        <li><a href="login">Keluar</a></li>	
+                    </ul>
                 </nav>
 
 				<!-- Main -->
@@ -78,24 +67,24 @@ $lihat  = $conn->query("select * from pendaftar");
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Nama :</h4>
-                                        <input type="text" name="nama" class="form-control" placeholder="Nama" />
+                                        <input required type="text" name="nama" class="form-control" placeholder="Nama" />
                                     </div>
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Email :</h4>
-                                        <input type="email" name="email" class="form-control" placeholder="Email" />
+                                        <input required type="email" name="email" class="form-control" placeholder="Email" />
                                     </div>
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Alamat :</h4>
-                                        <input type="text" name="alamat" class="form-control" placeholder="Alamat" />
+                                        <input required type="text" name="alamat" class="form-control" placeholder="Alamat" />
                                     </div>
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Agama :</h4>
-                                        <input type="text" name="agama" class="form-control" placeholder="Agama" />
+                                        <input required type="text" name="agama" class="form-control" placeholder="Agama" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Tanggal Lahir :</h4>
-                                        <input type="date" name="ttl" class="form-control" placeholder="Alamat" />
+                                        <input required type="date" name="ttl" class="form-control" placeholder="Alamat" />
                                     </div>
                                     
                                     <div class="col-4">
@@ -112,16 +101,16 @@ $lihat  = $conn->query("select * from pendaftar");
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>No.HP :</h4>
-                                        <input type="text" name="nohp" class="form-control" placeholder="08xxxxxxxxxx" />
+                                        <input required type="text" name="nohp" class="form-control" placeholder="08xxxxxxxxxx" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Pekerjaan :</h4>
-                                        <input type="text" name="pekerjaan" class="form-control" placeholder="Nelayan" />
+                                        <input required type="text" name="pekerjaan" class="form-control" placeholder="Nelayan" />
                                     </div>
                                     
                                     <div class="col-12">
-                                        <select name="asuransi" id="asuransi">
+                                        <select required name="asuransi" id="asuransi">
                                             <option value="">- Pilih Asuransi Terbaikmu -</option>
                                             <option value="Asuransi Sinarmas1">Asuransi Sinarmas</option>
                                             <option value="BPJS Ketenagakerjaan">BPJS Ketenagakerjaan</option>
@@ -139,12 +128,12 @@ $lihat  = $conn->query("select * from pendaftar");
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>NIK :</h4>
-                                        <input type="text" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" />
+                                        <input required type="text" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Foto Diri :</h4>
-                                        <input type="file" name="foto" id="demo-name" value="" />
+                                        <input required type="file" name="foto" id="demo-name" value="" />
                                     </div>
                                 </div><br><br>
                                 <center>

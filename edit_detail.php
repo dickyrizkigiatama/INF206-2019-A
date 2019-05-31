@@ -1,6 +1,6 @@
 <?php
 require_once "koneksi.php";
-$lihat  = $conn->query("select * from pendaftar");
+$lihat  = $conn->query("select * from perusahaan");
 // $lihat ubah menjadi $simpan
 ?>
 
@@ -42,8 +42,8 @@ $lihat  = $conn->query("select * from pendaftar");
 								<ul>
 									<li><a href="tambah_list_perusahaan.php">Beranda</a></li>
 									<li><a href="#">Admin</a></li>
-									<li><a href="#">List pendaftaran</a></li>
-									<li><a href="edit_detail.php">Edit</a></li>
+									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
+									<li><a href="#">Edit</a></li>
 									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
 								</ul>
 						</nav>
@@ -53,29 +53,28 @@ $lihat  = $conn->query("select * from pendaftar");
 			<div>
 				<header>
 					<center>
-						<h1>Pendaftar Asuransi MasiN<br /></h1>
+						<h1>Daftar Perusahaan Asuransi MasiN<br /></h1>
 						<h2>Manajemen Asuransi Nelayan <br></h2>
                     </center>
                     <br><br>
                 </header>
                     <section><center>
-							<h3>Table Pendaftar Asuransi</h3>
+							<h3>Table Perusahaan Asuransi</h3>
 									<div class="table-wrapper">
 										<table class="alt">
 											<thead>
 												<tr>
                                                 <th><center>No</center></th>
-                                                <th><center>Nama</center></th>
-                                                <th><center>Email</center></th>
+                                                <th><center>Nama Perusahaan</center></th>
+                                                <th><center>Deskripsi</center></th>
                                                 <th><center>Alamat</center></th>
-                                                <th><center>Agama</center></th>
-                                                <th><center>Tempat/Tanggal Lahir</center></th>
-                                                <th><center>Jenis Kelamin</center></th>
-                                                <th><center>No HP</center></th>
-                                                <th><center>Pekerjaan</center></th>
-                                                <th><center>Asuransi Terdaftar</center></th>
-                                                <th><center>NIK</center></th>
-                                                <th><center>Foto</center></th>
+                                                <th><center>No Telepon</center></th>
+                                                <th><center>Syarat 1</center></th>
+                                                <th><center>Syarat 2</center></th>
+                                                <th><center>Syarat 3</center></th>
+                                                <th><center>Syarat 4</center></th>
+                                                <th><center>Syarat 5</center></th>
+                                                <th><center>Logo Perusahaan</center></th>
                                                 <th><center>Edit</center></th>
 												</tr>
 											</thead>
@@ -87,17 +86,16 @@ $lihat  = $conn->query("select * from pendaftar");
 												<tr>
 													<td><center>".$no."</center></td>
 													<td><center>".$pendaftar['nama']."</center></td>
-                                                    <td><center>".$pendaftar['email']."</center></td>
+                                                    <td><center>".$pendaftar['deskripsi']."</center></td>
                                                     <td><center>".$pendaftar['alamat']."</center></td>
-                                                    <td><center>".$pendaftar['agama']."</center></td>
-                                                    <td><center>".$pendaftar['ttl']."</center></td>
-                                                    <td><center>".$pendaftar['jk']."</center></td>
-                                                    <td><center>".$pendaftar['nohp']."</center></td>
-                                                    <td><center>".$pendaftar['pekerjaan']."</center></td>
-                                                    <td><center>".$pendaftar['asuransi']."</center></td>
-                                                    <td><center>".$pendaftar['nik']."</center></td>
-                                                    <td><center>".$pendaftar['foto']."</center></td>
-                                                    <td><center><a href='#?id_asuransi=".$pendaftar['id_asuransi']."'>Ubah</a> | <a href='act_hapus_pendaftaran_asuransi.php?id_asuransi=".$pendaftar['id_asuransi']."'>Hapus</a></center></td>
+                                                    <td><center>".$pendaftar['notelp']."</center></td>
+                                                    <td><center>".$pendaftar['syarat1']."</center></td>
+                                                    <td><center>".$pendaftar['syarat2']."</center></td>
+                                                    <td><center>".$pendaftar['syarat3']."</center></td>
+                                                    <td><center>".$pendaftar['syarat4']."</center></td>
+                                                    <td><center>".$pendaftar['syarat5']."</center></td>
+                                                    <td><center>".$pendaftar['gambar']."</center></td>
+                                                    <td><center><a href='form_edit_detail.php?id=".$pendaftar['id']."'>Ubah</a> | <a href='act_hapus_edit_detail.php?id=".$pendaftar['id']."'>Hapus</a></center></td>
                                                 </tr>
                                                 ";
                                                 $no++;

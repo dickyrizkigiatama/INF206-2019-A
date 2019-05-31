@@ -1,7 +1,8 @@
 <?php
+session_start();
 require_once "koneksi.php";
 
-$simpan  = $conn->query("select * from lihat");
+$simpan  = $conn->query("SELECT * FROM perusahaan");
 $array=array(
 	"style1",
 	"style2",
@@ -59,13 +60,15 @@ $array=array(
 
 		<!-- Menu -->
 		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.html">Beranda</a></li>
-				<li><a href="generic.html">Nama Pengguna</a></li>
-				<li><a href="generic.html">Keluar</a></li>
-			</ul>
-		</nav>
+						<h2>Menu</h2>
+								<ul>
+									<li><a href="#">Beranda</a></li>
+									<li><a href="#">Admin</a></li>
+									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
+									<li><a href="edit_detail.php">Edit</a></li>
+									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
+								</ul>
+						</nav>
 
 		<!-- Main -->
 		<div id="main">
@@ -84,13 +87,16 @@ $array=array(
 					<?php $i=1;while($tampil=mysqli_fetch_assoc($simpan)):?>
 						<article class="<?= $array[$i++];?>">
 							<span class="image">
-								<img src="<?=$tampil['image']?>" alt="" />
+								<!-- <?php echo "<a href='edit_detail.php?judul=".$tampil['nama']."'>"; ?> -->
+									<img src="images/<?=$tampil['gambar']?>" alt="" />
+								<!-- </a> -->
 							</span>
-							<!-- <a href="<?=$tampil['href']?>"> -->
-								<h2><?=$tampil['judul']?></h2>
-								<div class="content">
+							<center>
+							<h2><?=$tampil['nama']?></h2>
+							</center>
+								<!-- <div class="content">
 									<p><?=$tampil['isi']?></p>
-								</div>
+								</div> -->
 							<!-- </a> -->
 						</article>
 					<?php endwhile;?>
@@ -98,6 +104,8 @@ $array=array(
 			</div>
 		</div>
 
+		<!-- <a href='ubah_mahasiswa.php?nim=".$mahasiswa['NIM']."'>Ubah</a>  -->
+		
 		<!-- Footer -->
 		<footer id="footer">
 			<center>

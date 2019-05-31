@@ -49,7 +49,7 @@
 		<nav id="menu">
 			<h2>Menu</h2>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="../login">Home</a></li>
 
 			</ul>
 		</nav>
@@ -59,13 +59,14 @@
 			<div class="inner text-center">
 				<section>
 					<h2>Daftar</h2>
-					<br>
+					<br><br>
 					<div class="row justify-content-center mt-3">
 						<div class="col-lg-6">
 							<form method="post" action="<?= base_url('login/daftar'); ?>">
 								<div class="fields text-center">
 
 									<div class="field">
+									<p>Massukkan Username</p>
 										<input type="text" name="username" id="name" placeholder="Masukkan Username">
 									</div>
 
@@ -75,12 +76,13 @@
 
 
 									<div class="field">
+									<p>Masukkan Password</p>
 										<input type="password" name="password" id="password" placeholder=" Masukkan Password ">
 									</div>
 
 								</div>
 
-								<button type="submit" class="btn btn-outline-light">DAFTAR</button>
+								<button type="submit" class="btn btn-outline-light">DAFTAR AKUN</button>
 							</form>
 						</div>
 					</div>
