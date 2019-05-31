@@ -28,12 +28,10 @@ class user_data extends CI_Model
                     ];
                     $this->session->set_userdata($data);
                     redirect('homeuser');
-                }
-                else {
+                } else {
                     redirect('login');
                 }
-            }
-            elseif ($user['role'] == "admin") {
+            } elseif ($user['role'] == "admin") {
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'username' => $user['username'],
@@ -41,14 +39,22 @@ class user_data extends CI_Model
                     ];
                     $this->session->set_userdata($data);
                     redirect('homeuser');
-                }
-                else {
+                } else {
                     redirect('login');
                 }
-            }
-            else {
+            } else {
                 redirect('login');
             }
         }
+    }
+
+    public function listperusahaan()
+    {
+        return $this->db->get('perusahaan')->result_array();
+    }
+
+    public function perusahaan($id)
+    {
+        return $this->db->get_where('perusahaan', ['id' => $id])->row_array();
     }
 }

@@ -1,6 +1,7 @@
 <?php
+session_start();
 require_once "koneksi.php";
-$lihat  = $conn->query("select * from lihat");
+$lihat  = $conn->query("select * from pendaftar");
 // $lihat ubah menjadi $simpan
 ?>
 
@@ -39,21 +40,10 @@ $lihat  = $conn->query("select * from lihat");
 				<!-- Menu -->
                 <nav id="menu">
                     <h2>Menu</h2>
-                    <?php if($user['role'] == "user") : ?>
-                        <ul>
-                            <li><a href="#">Beranda</a></li>
-                            <li><a href="#"><?= $user['username'];?></a></li>
-                            <li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
-                        </ul>
-                        <?php elseif($user['role'] == "admin") : ?>
-                            <ul>
-                                <li><a href="#">Beranda</a></li>
-                                <li><a href="#"><?= $user['username'];?></a></li>
-                                <li><a href="#">List pendaftaran</a></li>
-                                <li><a href="#">Edit</a></li>
-                                <li><a href="<?= base_url('/login/logout')?>">Keluar</a></li>
-                            </ul>
-                    <?php endif;?>
+                    <ul>
+                        <li><a href="../">Beranda</a></li>
+                        <li><a href="login">Keluar</a></li>	
+                    </ul>
                 </nav>
 
 				<!-- Main -->
@@ -73,89 +63,92 @@ $lihat  = $conn->query("select * from lihat");
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
-							<form method="post" action="#">
+							<form action="act_pendaftaran_asuransi.php" method="POST" enctype="multipart/form-data">
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Nama :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nama" />
+                                        <input required type="text" name="nama" class="form-control" placeholder="Nama" />
                                     </div>
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Email :</h4>
-                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                        <input required type="email" name="email" class="form-control" placeholder="Email" />
                                     </div>
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Alamat :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Alamat" />
+                                        <input required type="text" name="alamat" class="form-control" placeholder="Alamat" />
                                     </div>
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Agama :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Agama" />
+                                        <input required type="text" name="agama" class="form-control" placeholder="Agama" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Tanggal Lahir :</h4>
-                                        <input type="date" name="demo-name" id="demo-name" value="" placeholder="Alamat" />
+                                        <input required type="date" name="ttl" class="form-control" placeholder="Alamat" />
                                     </div>
                                     
                                     <div class="col-4">
                                     <h4>Jenis kelamin :</h4>
-                                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                        <label for="demo-priority-low">Laki-Laki</label>
-
-                                        <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                        <label for="demo-priority-normal">Perempuan</label>
+                                        <span>
+                                            <input required type="radio" id="demo-priority-low" value="Laki-Laki" name="jk" checked />
+                                            <label for="demo-priority-low">Laki-Laki</label>
+                                        </span>
+                                        <span>
+                                            <input required type="radio" id="demo-priority-normal" value="Perempuan" name="jk" />
+                                            <label for="demo-priority-normal">Perempuan</label>
+                                        </span>    
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>No.HP :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="08xxxxxxxxxx" />
+                                        <input required type="text" name="nohp" class="form-control" placeholder="08xxxxxxxxxx" />
                                     </div>
                                     
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Pekerjaan :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nelayan" />
+                                        <input required type="text" name="pekerjaan" class="form-control" placeholder="Nelayan" />
                                     </div>
                                     
                                     <div class="col-12">
-                                        <select name="demo-category" id="demo-category">
+                                        <select required name="asuransi" id="asuransi">
                                             <option value="">- Pilih Asuransi Terbaikmu -</option>
-                                            <option value="1">Asuransi Sinarmas</option>
-                                            <option value="1">BPJS Ketenagakerjaan</option>
-                                            <option value="1">AXA Mandiri Insurance</option>
-                                            <option value="1">Allianz Life Indonesia</option>
-                                            <option value="1">Aspan General Insurance</option>
-                                            <option value="1">Asuransi Jiwasraya</option>
-                                            <option value="1">Asuransi Tri Pakarta</option>
-                                            <option value="1">Bumiputera 1912</option>
-                                            <option value="1">Prudential Insurance</option>
-                                            <option value="1">AIA Financial Indonesia</option>
-                                            <option value="1">ACA Asuransi</option>
+                                            <option value="Asuransi Sinarmas1">Asuransi Sinarmas</option>
+                                            <option value="BPJS Ketenagakerjaan">BPJS Ketenagakerjaan</option>
+                                            <option value="AXA Mandiri Insurance">AXA Mandiri Insurance</option>
+                                            <option value="Allianz Life Indonesia">Allianz Life Indonesia</option>
+                                            <option value="Aspan General Insurance">Aspan General Insurance</option>
+                                            <option value="Asuransi Jiwasraya">Asuransi Jiwasraya</option>
+                                            <option value="Asuransi Tri Pakarta">Asuransi Tri Pakarta</option>
+                                            <option value="Bumiputera 1912">Bumiputera 1912</option>
+                                            <option value="Prudential Insurance">Prudential Insurance</option>
+                                            <option value="AIA Financial Indonesia">AIA Financial Indonesia</option>
+                                            <option value="ACA Asuransi">ACA Asuransi</option>
                                         </select>
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>NIK :</h4>
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nomor Induk Kependudukan" />
+                                        <input required type="text" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" />
                                     </div>
 
                                     <div class="col-6 col-12-xsmall">
                                     <h4>Foto Diri :</h4>
-                                        <input type="file" name="demo-name" id="demo-name" value="" />
+                                        <input required type="file" name="foto" id="demo-name" value="" />
                                     </div>
-
-                                </div>
+                                </div><br><br>
+                                <center>
+                                    <div class="inner">
+                                        <span class="actions">
+                                            <input type="submit" value="Daftar" class="primary" />
+                                            <a href="form_pendaftaran_asuransi.php"><input type="reset" value="Reset" /></a>
+                                        </span><br><br>
+                                        <a href="homeuser" class="button">Kembali ke Beranda</a>
+                                    </div>
+                                </center>
                             </form>
                         </div>
-                        <center>
-                            <div class="inner">
-                                <span class="actions">
-                                    <input type="submit" value="Daftar" class="primary" />
-                                    <a href="form_pendaftaran_asuransi.php"><input type="reset" value="Reset" /></a>
-                                </span>
-                            </div>
-                        </center>
+                        
                     </div>
-                    
                     
 
 				<!-- Footer -->

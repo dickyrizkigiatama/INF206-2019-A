@@ -2,7 +2,7 @@
 session_start();
 require_once "koneksi.php";
 
-$simpan  = $conn->query("select * from lihat");
+$simpan  = $conn->query("select * from perusahaan");
 $array=array(
 	"style1",
 	"style2",
@@ -58,7 +58,7 @@ $array=array(
 		<nav id="menu">
 						<h2>Menu</h2>
 								<ul>
-									<li><a href="#">Beranda</a></li>
+									<li><a href="tambah_list_perusahaan.php">Beranda</a></li>
 									<li><a href="#">Admin</a></li>
 									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
 									<li><a href="#">Edit</a></li>
@@ -81,18 +81,49 @@ $array=array(
 				<section class="inner">
 					<form action="act_tambah_list_perusahaan.php" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
-							<label >Logo Perusahaan</label>
+							<label >Logo Perusahaan *(jpg/png)</label>
 							<input required type="file" class="form-control" placeholder="Enter Logo Perusahaan" name="gambar">
-						</div>
+						</div><br>
 						<div class="form-group">
 							<label >Nama Perusahaan</label>
-							<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" name="judul">
-						</div>
+							<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" name="nama">
+						</div><br>
 						<div class="form-group">
 							<label >Informasi Umum</label>
-							<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="isi">
+							<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="deskripsi">
+						</div><br>
+						<div class="form-group">
+							<label >Alamat</label>
+							<input required type="text" class="form-control" placeholder="Enter Alamat Asuransi" name="alamat">
+						</div><br>
+						<div class="form-group">
+							<label >No Telepon</label>
+							<input required type="text" class="form-control" placeholder="Enter No Telepon Asuransi" name="notelp">
+						</div><br>
+						<div class="form-group">
+							<label >Syarat 1 :</label>
+							<input required type="text" class="form-control" placeholder="Enter Syarat" name="syarat1">
+						</div><br>
+						<div class="form-group">
+							<label >Syarat 2 :</label>
+							<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat2">
+						</div><br>
+						<div class="form-group">
+							<label >Syarat 3:</label>
+							<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat3">
+						</div><br>
+						<div class="form-group">
+							<label >Syarat 4:</label>
+							<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat4">
+						</div><br>
+						<div class="form-group">
+							<label >Syarat 5:</label>
+							<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat5">
 						</div>
+						<br>
+						<center>
 						<button type="submit" class="btn btn-primary">Tambah</button>
+						</center>
 					</form>
 				</section>
 			</div>

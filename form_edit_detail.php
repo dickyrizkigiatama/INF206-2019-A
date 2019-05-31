@@ -1,6 +1,9 @@
 <?php
 require_once "koneksi.php";
-$lihat  = $conn->query("select * from lihat");
+$id = $_GET['id'];
+
+$lihat  = $conn->query("select * from perusahaan where id = $id");
+$simpan = $lihat->fetch_assoc();
 // $lihat ubah menjadi $simpan
 ?>
 
@@ -43,7 +46,7 @@ $lihat  = $conn->query("select * from lihat");
 									<li><a href="#">Beranda</a></li>
 									<li><a href="#">Admin</a></li>
 									<li><a href="list_pendaftar.php">List pendaftaran</a></li>
-									<li><a href="#">Edit</a></li>
+									<li><a href="edit_detail">Edit</a></li>
 									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
 								</ul>
 						</nav>
@@ -52,40 +55,66 @@ $lihat  = $conn->query("select * from lihat");
 					<center>
 					<div id="main">
 						<div class="inner">
-							<img src="<?=$tampil['image']?>" alt="" />
+						
+								<h1>Edit Detail Perusahaan Asuransi MasiN<br /></h1>
+								<h2>Manajemen Asuransi Nelayan</h2>
+						
+							<!-- <img src="<?=$tampil['image']?>" alt="" /> -->
 						</div>
 					</div>
 					</center>
-
+					
 					<!--form edit main-->
 					<div id="main">
 						<div class="inner">
-							<form action="act_ubah_detail_perusahaan.php" method="POST">
+							<form action="act_ubah_detail_perusahaan.php" method="POST" enctype="multipart/form-data">
+								
+									<input type="hidden" class="form-control" placeholder="Enter Logo Perusahaan" hidden name="id" value="<?php echo $simpan['id'] ?>">
+
 								<div class="form-group">
-									<label >Logo Perusahaan :</label>
-									<input required type="file" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo $simpan['image'] ?>"  accept="image/*">
+									<label >Logo Perusahaan *(jpg/png)</label>
+									<input type="file" class="form-control" placeholder="Enter Logo Perusahaan" name="gambar" value="<?php echo $simpan['gambar'] ?>" >
+								</div><br>
+								<div class="form-group">
+									<label >Nama Perusahaan</label>
+									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" name="nama" value="<?php echo $simpan['nama'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Informasi Umum</label>
+									<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="deskripsi" value="<?php echo $simpan['deskripsi'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Alamat</label>
+									<input required type="text" class="form-control" placeholder="Enter Alamat Asuransi" name="alamat" value="<?php echo $simpan['alamat'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >No Telepon</label>
+									<input required type="text" class="form-control" placeholder="Enter No Telepon Asuransi" name="notelp" value="<?php echo $simpan['notelp'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Syarat 1 :</label>
+									<input required type="text" class="form-control" placeholder="Enter Syarat" name="syarat1" value="<?php echo $simpan['syarat1'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Syarat 2 :</label>
+									<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat2"  value="<?php echo $simpan['syarat2'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Syarat 3:</label>
+									<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat3"  value="<?php echo $simpan['syarat3'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Syarat 4:</label>
+									<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat4"  value="<?php echo $simpan['syarat4'] ?>">
+								</div><br>
+								<div class="form-group">
+									<label >Syarat 5:</label>
+									<input type="text" class="form-control" placeholder="Enter Syarat Jika Ada" name="syarat5"  value="<?php echo $simpan['syarat5'] ?>">
 								</div>
-								<div class="form-group">
-									<label >Nama Perusahaan :</label>
-									<input required type="text" class="form-control" placeholder="Enter Nama Perusahaan" value="<?php echo $simpan['judul'] ?>">
-								</div>
-								<div class="form-group">
-										<label >Informasi Umum :</label>
-										<input required type="text" class="form-control" placeholder="Enter Informasi Umum" name="isi" value="<?php echo $simpan['isi'] ?>">
-									</div>
-								<div class="form-group">
-									<label >Tujuan Perusahaan Asuransi :</label>
-									<input required type="text" class="form-control" placeholder="Enter Tujuan" name="nama" value="<?php echo $simpan['tujuan'] ?>">
-								</div>
-								<div class="form-group">
-									<label >Syarat dan Ketentuan :</label>
-									<input required type="text" class="form-control" placeholder="Syarat dan Ketentuan" name="jurusan" value="<?php echo $simpan['sk'] ?>">
-								</div>
-								<div class="form-group">
-										<label >Alamat:</label>
-										<input required type="text" class="form-control" placeholder="Alamat terbaru" name="jurusan" value="<?php echo $simpan['alamat'] ?>">
-								</div>
-								<button type="submit" class="btn btn-primary">Simpan</button>
+								<br>
+								<center>
+								<button type="submit" class="btn btn-primary">ubah</button>
+								</center>
 							</form>
 						</div>
 					</div>

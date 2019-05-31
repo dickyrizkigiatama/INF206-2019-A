@@ -1,6 +1,6 @@
 <?php
 require_once "koneksi.php";
-$lihat  = $conn->query("select * from lihat");
+$lihat  = $conn->query("select * from pendaftar");
 // $lihat ubah menjadi $simpan
 ?>
 
@@ -40,20 +40,20 @@ $lihat  = $conn->query("select * from lihat");
 				<nav id="menu">
 						<h2>Menu</h2>
 								<ul>
-									<li><a href="#">Beranda</a></li>
+									<li><a href="tambah_list_perusahaan.php">Beranda</a></li>
 									<li><a href="#">Admin</a></li>
 									<li><a href="#">List pendaftaran</a></li>
-									<li><a href="#">Edit</a></li>
+									<li><a href="edit_detail.php">Edit</a></li>
 									<li><a href="../../rpl/INF206-2019-A/login">Keluar</a></li>
 								</ul>
 						</nav>
 
     <!-- Main -->
 		<div id="main">
-			<div class="inner">
+			<div>
 				<header>
 					<center>
-						<h1>Pendatar Asuransi MasiN<br /></h1>
+						<h1>Pendaftar Asuransi MasiN<br /></h1>
 						<h2>Manajemen Asuransi Nelayan <br></h2>
                     </center>
                     <br><br>
@@ -61,43 +61,48 @@ $lihat  = $conn->query("select * from lihat");
                     <section><center>
 							<h3>Table Pendaftar Asuransi</h3>
 									<div class="table-wrapper">
-										<table>
+										<table class="alt">
 											<thead>
 												<tr>
-                                                <th>No</th>
-                                                <th>Nama</th>
-                                                <th>Tempat, Tanggal Lahir</th>
-                                                <th>Pekerjaan</th>
-                                                <th>Alamat</th>
-                                                <th>Kode Pos</th>
-                                                <th>Kota/Kabupaten</th>
-                                                <th>Nomor HP</th>
-                                                <th>Alamat E-mail</th>
+                                                <th><center>No</center></th>
+                                                <th><center>Nama</center></th>
+                                                <th><center>Email</center></th>
+                                                <th><center>Alamat</center></th>
+                                                <th><center>Agama</center></th>
+                                                <th><center>Tempat/Tanggal Lahir</center></th>
+                                                <th><center>Jenis Kelamin</center></th>
+                                                <th><center>No HP</center></th>
+                                                <th><center>Pekerjaan</center></th>
+                                                <th><center>Asuransi Terdaftar</center></th>
+                                                <th><center>NIK</center></th>
+                                                <th><center>Foto</center></th>
+                                                <th><center>Edit</center></th>
 												</tr>
 											</thead>
 											<tbody>
+                                                <?php
+                                                $no = 1;
+                                                while ($pendaftar = $lihat->fetch_assoc()){
+                                                echo "
 												<tr>
-													<td>1</td>
-													<td>Anggi</td>
-                                                    <td>Banda Aceh, 29/9/1999</td>
-                                                    <td>mahasiswa</td>
-                                                    <td>Peniti</td>
-                                                    <td>-</td>
-                                                    <td>banda Aceh</td>
-                                                    <td>082360164696</td>
-                                                    <td>anggi@gmail.com</td>
-												</tr>
-												<tr>
-                                                <td>2</td>
-													<td>Anggi</td>
-                                                    <td>Banda Aceh, 29/9/1999</td>
-                                                    <td>mahasiswa</td>
-                                                    <td>Peniti</td>
-                                                    <td>-</td>
-                                                    <td>banda Aceh</td>
-                                                    <td>082360164696</td>
-                                                    <td>anggi@gmail.com</td>
-												</tr>
+													<td><center>".$no."</center></td>
+													<td><center>".$pendaftar['nama']."</center></td>
+                                                    <td><center>".$pendaftar['email']."</center></td>
+                                                    <td><center>".$pendaftar['alamat']."</center></td>
+                                                    <td><center>".$pendaftar['agama']."</center></td>
+                                                    <td><center>".$pendaftar['ttl']."</center></td>
+                                                    <td><center>".$pendaftar['jk']."</center></td>
+                                                    <td><center>".$pendaftar['nohp']."</center></td>
+                                                    <td><center>".$pendaftar['pekerjaan']."</center></td>
+                                                    <td><center>".$pendaftar['asuransi']."</center></td>
+                                                    <td><center>".$pendaftar['nik']."</center></td>
+                                                    <td><center>".$pendaftar['foto']."</center></td>
+                                                    <td><center><a href='#?id_asuransi=".$pendaftar['id_asuransi']."'>Ubah</a> | <a href='act_hapus_pendaftaran_asuransi.php?id_asuransi=".$pendaftar['id_asuransi']."'>Hapus</a></center></td>
+                                                </tr>
+                                                ";
+                                                $no++;
+                                                }
+                                                ?>
 											</tbody>
 											<!-- <tfoot>
 												<tr>

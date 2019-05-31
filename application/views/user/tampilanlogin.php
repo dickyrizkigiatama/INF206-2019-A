@@ -48,7 +48,7 @@
         <nav id="menu">
             <h2>Menu</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="">Home</a></li>
 
             </ul>
         </nav>
@@ -58,17 +58,19 @@
             <div class="inner text-center">
                 <section>
                     <h2>MASUK</h2>
-                    <br>
+                    <br><br>
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
                             <form method="POST" action="<?= base_url('login'); ?>">
                                 <div class="fields text-center">
                                     <div class="field">
+                                        <p>Username</p>
                                         <input type="text" name="username" id="name" placeholder=" Masukkan Username  ">
                                     </div>
                                     <div class="field text-center">
                                     </div>
                                     <div class="field">
+                                    <p>Password</p>
                                         <input type="password" name="password" id="password" placeholder=" Masukkan Password ">
                                     </div>
                                 </div>
